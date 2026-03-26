@@ -1,0 +1,20 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Generated PDF (rebuild from .tex)
+*.pdf
+
+# Preview images
+preview_page_*.png
+
+# Conversation export
+*.txt
+
+# Misc
+p1.jpg
+p1.png
+main.py
