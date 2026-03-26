@@ -120,11 +120,26 @@
   \end{editorbar}%
 }
 
-% --- Epigraph-style block for direct quotations from the source ---
+% --- Block for direct quotations/maxims from the source text ---
+% Non-italic, indented, with a thin left rule to set apart from flowing body
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  linewidth=1pt,
+  linecolor=chaptercolor!40,
+  innerleftmargin=10pt,
+  innerrightmargin=0pt,
+  innertopmargin=4pt,
+  innerbottommargin=4pt,
+  skipabove=8pt,
+  skipbelow=8pt,
+]{sourcebar}
+
 \newenvironment{sourcetext}{%
-  \begin{quote}\itshape
+  \begin{sourcebar}%
 }{%
-  \end{quote}
+  \end{sourcebar}%
 }
 
 % --- Suppress chapter number in headers ---
@@ -244,9 +259,10 @@ between the source text and editorial commentary:
 
 \begin{itemize}[leftmargin=2em]
 \item \textbf{Body text} (this serif typeface) presents translated
-  content from the source manuscript. Indented italic passages mark
-  direct quotations or maxims where the source language is particularly
-  vivid or condensed.
+  content from the source manuscript. Passages set apart with a thin
+  {\color{chaptercolor!40}\rule{6pt}{6pt}} left rule are direct
+  quotations or maxims where the source language is particularly vivid
+  or condensed.
 \item
   \begin{editornote}
   Gray-barred passages like this one are editorial context---written by
@@ -308,9 +324,10 @@ the basis of the entire economy. Samurai stipends were paid in rice, domain
 revenues were calculated in rice, and the great rice exchanges---above all
 the D\=ojima Rice Exchange (\jp{堂島米会所}) in Osaka---functioned as
 sophisticated futures markets where ``book rice'' (\jp{帳合米},
-\textit{ch\=oaimai}) was traded as forward contracts.\tn{The D\=ojima
-exchange, established in 1697, is often cited as the world's first organized
-futures market.}
+\textit{ch\=oaimai}) was traded as forward contracts.\tn{The D\=ojima Rice Exchange was established in 1697 as a
+spot market for rice. Organized futures trading (\jp{帳合米},
+\textit{ch\=oaimai}) was formally authorized by the shogunate in 1730,
+making it one of the world's first organized futures markets.}
 
 \section*{Structure of the Text}
 
@@ -355,8 +372,8 @@ The manuscript covers several interconnected domains:
 The foundational concept in Neo-Confucian cosmology, representing the
 undifferentiated unity from which Yin and Yang emerge. The opening
 deliberately echoes Zhou Dunyi's \textit{Taijitu shuo} (Explanation of the
-Diagram of the Supreme Ultimate, c.\,1070), grounding market theory in the
-highest philosophical authority available.}
+Diagram of the Supreme Ultimate, mid-11th century), grounding market theory
+in the highest philosophical authority available.}
 moves and gives birth to Yang; when still, it gives birth to Yin.
 The principle of one stillness and one movement---Heaven and Earth rise and
 fall according to this logic. Movement reaches its extreme and becomes
@@ -469,8 +486,10 @@ Do not follow the crowd blindly. When all are buying, consider selling; when
 all are selling, consider buying. The profit lies in going against common
 sentiment, yet one must have sound reason for doing so.\tn{This contrarian
 principle is perhaps the most famous teaching of the Edo-period market texts.
-It anticipates behavioral finance concepts like ``buy when there is blood in
-the streets'' (attributed to Baron Rothschild) by roughly a century.}
+The concept predates the Western maxim ``buy when there is blood in the
+streets'' (apocryphally attributed to Baron Rothschild, first documented in
+print in the 1890s). The underlying trading ideas in this text likely
+predate even this 1851 manuscript copy by decades.}
 
 \section{The Thirty-Eight Provisions for Seasonal Trading}
 
@@ -986,26 +1005,59 @@ price will revert.
 
 \section{Position Calculations at the Middle Star}
 
+The source text devotes several pages to detailed numerical examples of
+position-building at the middle star level. These tables show how capital
+compounds through staged entry at each confirmation point.
+
+\subsection{Trading with 100 Ry\=o}
+
+\begin{center}
+\jp{百両売 天之商内} --- \textit{Selling with 100 Ry\=o, Within Heaven's Trading}
+\end{center}
+
+Starting from a base of 100 ry\=o at the middle star (\jp{中星世俵}) level:
+
+\begin{sourcetext}
+Stage One (\jp{壱}): 100 ry\=o committed, purchasing 20 tawara at the
+middle star level. This is the probing entry.\\[0.3em]
+Stage Two (\jp{弐}): A further 100 ry\=o committed as direction
+confirms---position now 200 ry\=o, approximately 20 tawara held. At a
+10\% gain (\jp{一割}), the profit is reinvested.\\[0.3em]
+Stage Three (\jp{参}): Position built to 300 ry\=o. At the middle star,
+this commands an expanded tawara position. Compounding accelerates.\\[0.3em]
+Stage Four (\jp{四}): Full position reached at 400 ry\=o capital committed.
+Through compounding of profits at each stage, the effective exposure has
+grown to approximately 800 ry\=o---doubling the original capital through
+disciplined staged entry.
+\end{sourcetext}
+
+\subsection{Scaling to 1,000 Ry\=o}
+
+The text extends the same method to larger capital bases, with the
+proportional discipline becoming even more critical:
+
+\begin{sourcetext}
+Stage One (\jp{壱}): 1,000 ry\=o over half a year (\jp{半年千両}).
+First entry at 10\% (\jp{一割})---committing only 100 ry\=o initially.\\[0.3em]
+Stage Two (\jp{弐}): At 20\% confirmation (\jp{二割}), add 100 ry\=o.
+Middle star level maintained. Running total through 14 tawara positions.\\[0.3em]
+Stage Three (\jp{参}): At 20\%, further 300 ry\=o committed. Position
+accumulates at the middle star level.\\[0.3em]
+Stage Four (\jp{四}): At 20\%, the accumulated position reaches 14 tawara
+at full commitment. Total effective position: approximately 800 ry\=o in
+profit across the staged entries.\\[0.3em]
+Stage Five (\jp{五}): At 30\% (\jp{三割}), the final stage---the full
+cycle is complete.
+\end{sourcetext}
+
 \begin{editornote}
-The source text provides extensive numerical examples of position-building
-at each level. The following summarizes the method; the original tables
-detail specific ry\=o-to-tawara conversions across dozens of stages.
+The source text continues with further calculation tables covering
+intermediate capital levels (200, 300, 500 ry\=o) and varying numbers of
+stages, all following the same proportional method. The key principle is
+constant: never commit the full position at once, and reinvest profits at
+each stage to compound returns. The original tables occupy approximately
+six pages of the manuscript.
 \end{editornote}
-
-Starting from 100 ry\=o, the method compounds through stages:
-
-\begin{enumerate}[leftmargin=2em]
-\item \textbf{First entry}: 100 ry\=o committed at the middle star level,
-  purchasing approximately 14 tawara.
-\item \textbf{Second entry}: another 100 ry\=o as direction confirms---total
-  position now 200 ry\=o.
-\item \textbf{Third entry}: further addition, bringing total to 300 ry\=o.
-\item \textbf{Fourth entry}: full position established at 400 ry\=o, with
-  compounding bringing the effective exposure to approximately 800 ry\=o.
-\end{enumerate}
-
-The method is then extended to 1,000-ry\=o and larger capital bases, always
-following the same staged discipline.
 
 % =============================================================================
 % CHAPTER 8: SEVEN FORTUNES AND FOLLOWING GOLD
@@ -1262,27 +1314,27 @@ may you trade with wisdom and prosper.
   Japanese Business, 1600--1980}. 2nd ed. London: George Allen \& Unwin,
   1981.
 
-\item Moss, Michael. ``The Dojima Rice Market and the Origins of Futures
-  Trading.'' In \textit{The Origins of Value: The Financial Innovations
-  That Created Modern Capital Markets}, edited by William N.\ Goetzmann
-  and K.\ Geert Rouwenhorst, 305--322. Oxford: Oxford University Press,
-  2005.
+\item Moss, David A., and Eugene Kintgen. ``The Dojima Rice Market and
+  the Origins of Futures Trading.'' Harvard Business School Case 709-044.
+  Boston: Harvard Business School Publishing, 2009. Revised 2010.
 
 \item Nison, Steve. \textit{Japanese Candlestick Charting Techniques}.
-  2nd ed. New York: Prentice Hall, 2001.
+  2nd ed. New York: Prentice Hall Press, 2001.
 
 \item Schaede, Ulrike. ``Forwards and Futures in Tokugawa-Period Japan:
   A New Perspective on the D\=ojima Rice Market.'' \textit{Journal of
   Banking \& Finance} 13, no.~4--5 (1989): 487--513.
 
-\item Shimamoto, Ryūto. \jp{堂島米市場} (\textit{D\=ojima Kome Shij\=o}
-  [The D\=ojima Rice Market]). Tokyo: Kodansha, 2018.
+\item Takatsuki, Yasuo (\jp{高槻泰郎}). \jp{大坂堂島米市場：江戸幕府vs市場経済}
+  (\textit{\=Osaka D\=ojima Kome Shij\=o: Edo Bakufu vs.\ Shij\=o Keizai}
+  [The Osaka D\=ojima Rice Market: Edo Shogunate vs.\ Market Economy]).
+  Kodansha Gendai Shinsho 2487. Tokyo: Kodansha, 2018.
 
 \item West, Mark D. ``Private Ordering at the World's First Futures
   Exchange.'' \textit{Michigan Law Review} 98, no.~8 (2000): 2574--2615.
 
 \item Zhou Dunyi. \textit{Taijitu shuo} (\jp{太極図説}, Explanation of the
-  Diagram of the Supreme Ultimate). c.\,1070. In Wing-tsit Chan, trans.
+  Diagram of the Supreme Ultimate). Mid-11th century. In Wing-tsit Chan, trans.
   and comp., \textit{A Source Book in Chinese Philosophy}, 460--465.
   Princeton: Princeton University Press, 1963.
 
