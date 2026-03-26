@@ -15,7 +15,6 @@
 
 \documentclass[11pt, openany]{book}
 
-% --- Page geometry ---
 \usepackage[
   papersize={6in,9in},
   margin=0.75in,
@@ -25,22 +24,16 @@
   bottom=0.8in
 ]{geometry}
 
-% --- Fonts (XeLaTeX) ---
 \usepackage{fontspec}
 \setmainfont{Noto Serif}[
   BoldFont={Noto Serif Bold},
   ItalicFont={Noto Serif Italic},
   BoldItalicFont={Noto Serif Bold Italic},
 ]
-\setsansfont{Noto Sans}[
-  BoldFont={Noto Sans Bold},
-  ItalicFont={Noto Sans Italic},
-]
+\setsansfont{Noto Sans}
 \newfontfamily\japanesefont{Noto Serif JP}
-\newfontfamily\japanesesans{Noto Sans JP}
 \newcommand{\jp}[1]{{\japanesefont #1}}
 
-% --- Packages ---
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{titlesec}
@@ -53,16 +46,10 @@
 \usepackage{setspace}
 \usepackage{lettrine}
 \usepackage{parskip}
-\usepackage{framed}
-\usepackage{mdframed}
 
-% --- Colors ---
 \definecolor{chaptercolor}{HTML}{8B0000}
 \definecolor{sectioncolor}{HTML}{333333}
-\definecolor{notecolor}{HTML}{666666}
-\definecolor{editorbar}{HTML}{BBBBBB}
 
-% --- Chapter and section styling ---
 \titleformat{\chapter}[display]
   {\normalfont\Large\bfseries\color{chaptercolor}}
   {\chaptertitlename\ \thechapter}{12pt}{\LARGE}
@@ -76,7 +63,6 @@
   {\normalfont\normalsize\bfseries\itshape\color{sectioncolor}}
   {\thesubsection}{1em}{}
 
-% --- Headers and footers ---
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small\itshape Sanen Kinsen Hiroku}
@@ -84,68 +70,16 @@
 \fancyfoot[CE,CO]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% --- Footnote styling ---
 \renewcommand{\footnotesize}{\small}
 
-% --- Translator's note command ---
+% Translator's note footnote
 \newcommand{\tn}[1]{\footnote{\textit{Translator's note:} #1}}
 
-% --- Japanese term with gloss ---
+% Japanese term with romanization gloss
 \newcommand{\jt}[2]{\jp{#1} (\textit{#2})}
 
-% =============================================================================
-% TWO-VOICE CONVENTION
-% =============================================================================
-% Source text: normal roman body text (Noto Serif)
-% Editorial voice: sans-serif, smaller, with gray left bar
-% This separation is stated explicitly in the "Note on the Translation"
-
-\newmdenv[
-  topline=false,
-  bottomline=false,
-  rightline=false,
-  linewidth=2pt,
-  linecolor=editorbar,
-  innerleftmargin=10pt,
-  innerrightmargin=0pt,
-  innertopmargin=4pt,
-  innerbottommargin=4pt,
-  skipabove=8pt,
-  skipbelow=8pt,
-]{editorbar}
-
-\newenvironment{editornote}{%
-  \begin{editorbar}\small\sffamily\color{notecolor}%
-}{%
-  \end{editorbar}%
-}
-
-% --- Block for direct quotations/maxims from the source text ---
-% Non-italic, indented, with a thin left rule to set apart from flowing body
-\newmdenv[
-  topline=false,
-  bottomline=false,
-  rightline=false,
-  linewidth=1pt,
-  linecolor=chaptercolor!40,
-  innerleftmargin=10pt,
-  innerrightmargin=0pt,
-  innertopmargin=4pt,
-  innerbottommargin=4pt,
-  skipabove=8pt,
-  skipbelow=8pt,
-]{sourcebar}
-
-\newenvironment{sourcetext}{%
-  \begin{sourcebar}%
-}{%
-  \end{sourcebar}%
-}
-
-% --- Suppress chapter number in headers ---
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
-% --- Hyperref setup ---
 \hypersetup{
   colorlinks=true,
   linkcolor=chaptercolor,
@@ -157,7 +91,7 @@
 % =============================================================================
 \begin{document}
 
-% --- Half-title page ---
+% --- Half-title ---
 \thispagestyle{empty}
 \begin{center}
 \vspace*{2.5in}
@@ -165,43 +99,32 @@
 {\large Three Monkeys Gold Spring Secret Record}
 \vfill
 \end{center}
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
+\newpage\thispagestyle{empty}\mbox{}\newpage
 
-% --- Full title page ---
+% --- Title page ---
 \thispagestyle{empty}
 \begin{center}
 \vspace*{1in}
-
 {\huge\bfseries\color{chaptercolor} \jp{三猿金泉秘録}}\\[1em]
 {\LARGE\bfseries Sanen Kinsen Hiroku}\\[0.7em]
 {\Large\itshape Three Monkeys Gold Spring\\Secret Record}\\[2em]
-
 \rule{3in}{0.5pt}\\[1.5em]
-
 {\large\itshape A Secret Treatise on the Art of\\Rice Market Speculation}\\[0.5em]
 {\normalsize from the Edo Period of Japan}\\[2.5em]
-
 {\normalsize Source text attributed to}\\[0.3em]
 {\large \jp{牛田権三郎}}\\
 {\normalsize Ushida Gonzabur\=o}\\[1.5em]
-
 {\normalsize Revised and corrected by}\\[0.3em]
 {\large \jp{鳴川猛之助}}\\
 {\normalsize Narukawa Takenosuke}\\[2em]
-
 \rule{3in}{0.5pt}\\[1.5em]
-
 {\normalsize Edited and produced by Zach Booth}\\[0.3em]
 {\small Translated with AI assistance}\\[3em]
-
 \end{center}
 \vfill
 \newpage
 
-% --- Copyright / attribution page ---
+% --- Copyright / attribution ---
 \thispagestyle{empty}
 \vspace*{\fill}
 \begin{small}
@@ -231,71 +154,25 @@ Hiroku}. The manuscript was sourced and the translation project directed
 by Zach Booth. The translation from classical Japanese was produced with
 AI assistance (Claude, Anthropic). The original text is written in
 \textit{kobun} (classical Japanese) with \textit{kanbun kundoku} reading
-marks in cursive script (\textit{s\=osho}) on aged paper. Some readings
-are necessarily approximate.\\[0.5em]
-See ``Note on the Translation'' (p.\,\pageref{sec:note-on-translation})
-for the typographic conventions used to distinguish the source text
-from editorial commentary.\\[1em]
+marks in cursive script on aged paper. Some readings are necessarily
+approximate.\\[0.5em]
+
+\noindent\textbf{How to Read This Translation}\\[0.3em]
+\noindent The body text of this book is a direct translation of the source
+manuscript. The chapter and section headings are editorial, added for
+navigation. Footnotes marked ``\textit{Translator's note}'' provide
+historical context, definitions, and comparative observations. Rare
+bracketed passages [like this] indicate brief editorial bridges where the
+manuscript's structure requires explanation. Everything else is
+Ushida's words.\\[1em]
 \end{small}
 \newpage
 
-% =============================================================================
-% TABLE OF CONTENTS
 % =============================================================================
 \thispagestyle{empty}
 \tableofcontents
 \newpage
 
-% =============================================================================
-% NOTE ON THE TRANSLATION
-% =============================================================================
-\chapter*{Note on the Translation}
-\addcontentsline{toc}{chapter}{Note on the Translation}
-\markboth{Note on the Translation}{}
-\label{sec:note-on-translation}
-
-This edition uses a consistent typographic convention to distinguish
-between the source text and editorial commentary:
-
-\begin{itemize}[leftmargin=2em]
-\item \textbf{Body text} (this serif typeface) presents translated
-  content from the source manuscript. Passages set apart with a thin
-  {\color{chaptercolor!40}\rule{6pt}{6pt}} left rule are direct
-  quotations or maxims where the source language is particularly vivid
-  or condensed.
-\item
-  \begin{editornote}
-  Gray-barred passages like this one are editorial context---written by
-  the editor to orient the reader. These words are not in the source text.
-  \end{editornote}
-\item \textbf{Footnotes} marked ``\textit{Translator's note:}'' provide
-  linguistic, historical, or comparative context.
-\item \textbf{Japanese terms} appear in their original characters with
-  romanization and English gloss on first use:
-  e.g.\ \jt{中星}{ch\=uboshi}, ``Middle Star.''
-\end{itemize}
-
-\subsection*{On Authorship}
-
-The manuscript attributes authorship to \jp{牛田権三郎} (Ushida
-Gonzabur\=o) and credits \jp{鳴川猛之助} (Narukawa Takenosuke) as
-editor and corrector. The text belongs to a genre of ``secret market
-transmission texts'' (\jp{相場秘伝書}, \textit{s\=oba hidensho}) that
-circulated among Edo-period trading houses. Many such texts were copied,
-modified, and reattributed across generations; some circulate under the
-name of the legendary Honma Munehisa (\jp{本間宗久}) of Sakata, the
-figure most widely credited with the origins of candlestick charting.
-
-The reader should understand this as a text from a \textit{tradition}
-rather than a single author's original composition. Whether Ushida
-Gonzabur\=o was a distinct historical figure, a pen name, or a later
-compiler drawing on the same body of oral and written market knowledge
-is uncertain from the manuscript alone. Throughout this translation,
-``the source text'' or ``the text'' refers to the manuscript as received,
-without prejudging the question of ultimate authorship.
-
-% =============================================================================
-% TRANSLATOR'S INTRODUCTION
 % =============================================================================
 \chapter*{Translator's Introduction}
 \addcontentsline{toc}{chapter}{Translator's Introduction}
@@ -303,53 +180,37 @@ without prejudging the question of ultimate authorship.
 
 The \textit{Sanen Kinsen Hiroku} (\jp{三猿金泉秘録}), or ``Three Monkeys
 Gold Spring Secret Record,'' is one of the most celebrated texts in the
-history of Japanese market speculation. It circulated as a closely guarded
-family manuscript before being revised and published by Narukawa Takenosuke
-in the mid-nineteenth century.\tn{The Kyoto University manuscript is dated
-\jp{嘉永四年五月廿日} (20th day of the 5th month, Kaei 4), corresponding
-to 1851. It identifies itself as a copy of the K\=omond\=o (\jp{好問堂})
-edition, published at Igarashi-tsu (\jp{五十嵐津}). The text references
-the Tenmei era (1781--1789) extensively for its price data.}
+history of Japanese market speculation.\tn{The manuscript is dated
+\jp{嘉永四年五月廿日} (1851) and identifies itself as a copy of the
+K\=omond\=o (\jp{好問堂}) edition, published at Igarashi-tsu
+(\jp{五十嵐津}). The text references the Tenmei era (1781--1789)
+extensively for its price data.}
 
 The title alludes to the proverb of the three monkeys---``see no evil, hear
-no evil, speak no evil'' (\jp{見ざる、聞かざる、言わざる})---here reinterpreted
+no evil, speak no evil'' (\jp{見ざる、聞かざる、言わざる})---reinterpreted
 as a warning to the trader: do not be swayed by what you \textit{see} others
 doing, what you \textit{hear} as rumor, or what you \textit{say} in haste.
 Instead, observe the deeper patterns.
 
-\section*{The Edo Rice Market}
+The manuscript attributes authorship to Ushida Gonzabur\=o
+(\jp{牛田権三郎}) and credits Narukawa Takenosuke (\jp{鳴川猛之助}) as
+editor and corrector. It belongs to a genre of ``secret market
+transmission texts'' (\jp{相場秘伝書}, \textit{s\=oba hidensho}) that
+circulated among Edo-period trading houses. Many such texts were copied,
+modified, and reattributed across generations; some circulate under the name
+of Honma Munehisa (\jp{本間宗久}) of Sakata. The reader should understand
+this as a text from a \textit{tradition} rather than a single author's
+original composition.
 
-During the Tokugawa period (1603--1868), rice was not merely a commodity but
-the basis of the entire economy. Samurai stipends were paid in rice, domain
-revenues were calculated in rice, and the great rice exchanges---above all
-the D\=ojima Rice Exchange (\jp{堂島米会所}) in Osaka---functioned as
-sophisticated futures markets where ``book rice'' (\jp{帳合米},
-\textit{ch\=oaimai}) was traded as forward contracts.\tn{The D\=ojima Rice Exchange was established in 1697 as a
-spot market for rice. Organized futures trading (\jp{帳合米},
-\textit{ch\=oaimai}) was formally authorized by the shogunate in 1730,
-making it one of the world's first organized futures markets.}
+During the Tokugawa period (1603--1868), rice was the basis of the economy.
+The D\=ojima Rice Exchange (\jp{堂島米会所}) in Osaka functioned as a
+sophisticated futures market where ``book rice'' (\jp{帳合米}) was traded
+as forward contracts.\tn{The D\=ojima Rice Exchange was established in 1697
+as a spot market. Organized futures trading (\jp{帳合米}) was formally
+authorized by the shogunate in 1730, making it one of the world's first
+organized futures markets.}
 
-\section*{Structure of the Text}
-
-The manuscript covers several interconnected domains:
-
-\begin{enumerate}[leftmargin=2em]
-\item \textbf{Cosmological framework}: The market is understood through
-  Yin-Yang (\jp{陰陽}) theory and the Neo-Confucian concept of the Supreme
-  Ultimate (\jp{太極}).
-\item \textbf{Cyclical analysis}: Multi-year cycles of favorable
-  (\jp{順来}) and adverse (\jp{逢来}) conditions, with specific articles
-  and provisions for each season.
-\item \textbf{Weather forecasting}: Detailed correlations between the
-  sexagenary cycle and weather---storms, floods, frost, tides, wind
-  direction---as predictors of harvest outcomes.
-\item \textbf{The Middle Star system}: A mean-reversion framework using a
-  long-term average price level as the reference for all trading decisions.
-\item \textbf{Position management}: Systematic staged entry and exit,
-  with detailed numerical examples and tree diagrams.
-\item \textbf{Trading psychology}: Teachings on patience, discipline, and
-  the danger of following the crowd, organized around the Confucian virtues.
-\end{enumerate}
+What follows is a direct translation of the complete text.
 
 \vspace{1em}
 \begin{flushright}
@@ -357,23 +218,20 @@ The manuscript covers several interconnected domains:
 \end{flushright}
 
 % =============================================================================
-% CHAPTER 1: PREFACE
-% =============================================================================
 \chapter{Preface: The Cosmology of the Market}
 
 \begin{center}
-\jp{三猿金泉録序}\\
+\jp{三猿金泉録序}\\[0.3em]
 \textit{Preface to the Three Monkeys Gold Spring Record}
 \end{center}
 
 \vspace{1em}
 
 \lettrine[lines=2]{T}{he Supreme Ultimate}\tn{\jp{太極} (\textit{taikyoku}).
-The foundational concept in Neo-Confucian cosmology, representing the
-undifferentiated unity from which Yin and Yang emerge. The opening
-deliberately echoes Zhou Dunyi's \textit{Taijitu shuo} (Explanation of the
-Diagram of the Supreme Ultimate, mid-11th century), grounding market theory
-in the highest philosophical authority available.}
+The foundational concept of Neo-Confucian cosmology. The opening echoes
+Zhou Dunyi's \textit{Taijitu shuo} (Explanation of the Diagram of the
+Supreme Ultimate, mid-11th century), grounding market theory in the highest
+philosophical authority.}
 moves and gives birth to Yang; when still, it gives birth to Yin.
 The principle of one stillness and one movement---Heaven and Earth rise and
 fall according to this logic. Movement reaches its extreme and becomes
@@ -381,9 +239,9 @@ stillness; stillness reaches its extreme and becomes movement again.
 Movement and stillness are the root of one another.
 
 This is the principle by which strong qi\tn{\jp{強気} (\textit{tsuyoki}),
-literally ``strong spirit.'' In market contexts, this corresponds to bullish
-sentiment or upward momentum. Its opposite, \jp{弱気} (\textit{yowaki}),
-corresponds to bearish sentiment.} and weak qi alternate.
+literally ``strong spirit''---bullish sentiment. Its opposite, \jp{弱気}
+(\textit{yowaki}), ``weak spirit,'' is bearish sentiment.} and weak qi
+alternate.
 
 When this principle is applied to all things, there is nothing it does not
 encompass. When applied to rice, the qi of people---whether strong or
@@ -395,64 +253,48 @@ examine the rice markets.
 This is the principle that transcends mere natural disposition.
 
 % =============================================================================
-% CHAPTER 2: FAVORABLE AND ADVERSE CONDITIONS + ARTICLES
-% =============================================================================
 \chapter{Favorable and Adverse Conditions; The Articles of Trading}
+
+\section{Favorable and Adverse Conditions}
 
 \begin{center}
 \jp{順来・逢来} --- \textit{Junrai and Airai}
 \end{center}
 
-\vspace{1em}
+\vspace{0.5em}
 
-The market moves in great cycles of favorable conditions (\jt{順来}{junrai})
-and adverse conditions (\jt{逢来}{airai}). Within a period of roughly
-twelve to thirteen years, favorable conditions persist for approximately ten
-years, and adverse conditions for three.\tn{This roughly 10:3 ratio of
-bull-to-bear years is a recurring theme. While the specific ratio is
-debatable, the underlying insight---that markets spend more time rising than
-falling, but that the falls are sharper---anticipates modern observations
-about market asymmetry.}
-
-\section{Favorable-Condition Years}
+The market moves in great cycles of favorable conditions
+(\jt{順来}{junrai}) and adverse conditions (\jt{逢来}{airai}). Within a
+period of roughly twelve to thirteen years, favorable conditions persist for
+approximately ten years, and adverse conditions for three.\tn{This roughly
+10:3 ratio of bull-to-bear years anticipates modern observations about
+market asymmetry---that markets spend more time rising than falling, but
+that the falls are sharper.}
 
 During favorable years, rice is generally at high levels. When old rice
-(\jt{古米}{komai})\tn{``Old rice'' refers to rice from previous harvests,
-as opposed to \jp{新米} (\textit{shinmai}), newly harvested rice. Old rice
-was traded as a distinct commodity with its own price dynamics.} is in a year
-of abundance, it will be cheap:
+(\jt{古米}{komai})\tn{Rice from previous harvests, as opposed to
+\jp{新米} (\textit{shinmai}), newly harvested rice. Old rice was traded as
+a distinct commodity.} is in a year of abundance, it will be cheap. Buy in
+the fourth month. By mid-sixth month, prices will be high---this is where
+one sells. In autumn, buy again around the seventh month. Toward year-end,
+the price of old rice will rise, and one should sell again.
 
-\begin{sourcetext}
-Buy in the fourth month. By mid-sixth month, prices will be high---this is
-where one sells. In autumn, buy again around the seventh month. Toward
-year-end, the price of old rice will rise, and one should sell again.
-\end{sourcetext}
-
-This is the fundamental seasonal pattern of favorable years.
-
-\section{Adverse-Condition Years}
+This is the fundamental pattern of favorable years.
 
 In adverse years, the cheap period for old rice falls around the fourth
 through sixth months. In autumn, one should buy, and by year-end the rice
-price climbs. But the overall trajectory is downward---the trader must be
-more cautious, take smaller positions, and be quicker to exit.
+price climbs.
 
-\section{Songs of the Seasons}
+In a year of favorable conditions, the autumn harvest is plentiful; the
+highs and lows can be estimated across four seasons. In spring, from around
+the fourth month onward, buy at the fifth-month level; by the end of the
+year, the high price will come.
 
-\begin{sourcetext}
-In a year of favorable conditions, the autumn harvest is plentiful;\\
-the highs and lows can be estimated across four seasons.\\[0.5em]
-In spring, from around the fourth month onward,\\
-buy at the fifth-month level;\\
-by the end of the year, the high price will come.
-\end{sourcetext}
-
-In favorable-condition periods, the rice market's sentiment
-(\jt{人気}{jinki})\tn{Literally ``people-qi''---the collective mood or
-energy of market participants.} for each month can be read directly. The
-fifth-month and year-end levels become the reference points. In a year of
-great flood (\jt{大水}{\=omizu}), the rice market reacts through the
-twelfth month.
+In favorable periods, the rice market's sentiment (\jt{人気}{jinki})\tn{%
+Literally ``people-qi''---the collective mood of market participants.} for
+each month can be read directly. The fifth-month and year-end levels become
+the reference points. In a year of great flood, the rice market reacts
+through the twelfth month.
 
 \section{The Fifteen Articles of Trading}
 
@@ -460,36 +302,29 @@ twelfth month.
 \jp{十五ヶ条} --- \textit{J\=ugo Kaj\=o}
 \end{center}
 
+\vspace{0.5em}
+
 Within the market, one must read the sentiment of the crowd---whether people
 are inclined to buy or sell---and not act rashly.
 
-\begin{sourcetext}
 The large trader may think that because he has capital, he can afford to hold
-a losing position. This is a grave error.
-\end{sourcetext}
-
-Even with great capital, if one buys recklessly and the market moves against
-him, the losses compound. Conversely, a trader of modest means who reads the
-market well and trades with discipline can accumulate wealth steadily.
+a losing position. This is a grave error. Even with great capital, if one
+buys recklessly and the market moves against him, the losses compound.
+Conversely, a trader of modest means who reads the market well and trades
+with discipline can accumulate wealth steadily.
 
 The decision to buy or sell should not be made lightly. One should observe
-for several days:
-
-\begin{sourcetext}
-When the rice price has been falling and reaches a point where it no longer
-declines despite bad news---this is the moment to buy.\\[0.5em]
+for several days. When the rice price has been falling and reaches a point
+where it no longer declines despite bad news---this is the moment to buy.
 When rice has been rising and ceases to advance despite favorable
 reports---this is the moment to sell.
-\end{sourcetext}
 
 Do not follow the crowd blindly. When all are buying, consider selling; when
 all are selling, consider buying. The profit lies in going against common
 sentiment, yet one must have sound reason for doing so.\tn{This contrarian
-principle is perhaps the most famous teaching of the Edo-period market texts.
-The concept predates the Western maxim ``buy when there is blood in the
+principle predates the Western maxim ``buy when there is blood in the
 streets'' (apocryphally attributed to Baron Rothschild, first documented in
-print in the 1890s). The underlying trading ideas in this text likely
-predate even this 1851 manuscript copy by decades.}
+print in the 1890s).}
 
 \section{The Thirty-Eight Provisions for Seasonal Trading}
 
@@ -497,68 +332,51 @@ predate even this 1851 manuscript copy by decades.}
 \jp{三十八ヶ条} --- \textit{Sanj\=uhachi Kaj\=o}
 \end{center}
 
-\begin{editornote}
-The Fifteen Articles are followed in the source text by a more detailed set
-of thirty-eight provisions governing month-by-month trading. These extend
-the seasonal framework with specific rules for reading harvest signals.
-\end{editornote}
+\vspace{0.5em}
 
 In a year of adverse conditions, from around the fifth month onward, summer
 rice drops and autumn months see further decline. Autumn months are for
 buying; favorable months are for the pattern of waiting.
 
-On the upper, middle, and lower rice-producing regions:
+The upper rice-producing regions (\jt{上作}{j\=osaku}) yield abundantly;
+prices are depressed accordingly. The middle regions (\jt{中作}{ch\=usaku})
+fall between upper and lower estimates. The lower regions
+(\jt{下作}{gesaku}) yield poorly; prices rise.
 
-\begin{itemize}[leftmargin=2em]
-\item \textbf{Upper regions} (\jt{上作}{j\=osaku}): high yields; prices are
-  depressed accordingly.
-\item \textbf{Middle regions} (\jt{中作}{ch\=usaku}): moderate yields; prices
-  fall between the upper and lower estimates.
-\item \textbf{Lower regions} (\jt{下作}{gesaku}): poor harvest; prices rise.
-\end{itemize}
+For the months from the tenth onward, consider the first ten days of each
+month. The market's movement can be read within each four-to-five month
+period.
 
-For the months from the tenth onward, one should consider the first ten days
-of each month. The rice market's movement can be read within each
-four-to-five month period.
-
-\begin{sourcetext}
 In the fifth month, in a year of poor harvest, the rice situation becomes
 tight; one should buy at the lower level. But in a strong-yield period of
 four years, the rice pattern reverses.
-\end{sourcetext}
 
 When weak qi pervades the world and things seem to continue weakening, yet
 the rice price is at a level that appears flat---this is the year of rice
 buying.
 
 % =============================================================================
-% CHAPTER 3: CANDLE RECORDS AND STAGED ENTRY
-% =============================================================================
 \chapter{The Record of Patterns and Staged Entry}
 
 \section{Record of Spike Patterns}
 
 \begin{center}
-\jp{穂足の録} --- \textit{Hosoku no Roku}
+\jp{穂足の録} --- \textit{Hosoku no Roku}\tn{\jp{穂足} literally means
+``spike-foot'' or ``ear of grain,'' referring to the visual shape of
+price movements---an early form of pattern recognition.}
 \end{center}
 
-\begin{editornote}
-The title \jp{穂足} literally means ``spike-foot'' or ``ear of grain,''
-referring to the visual patterns of price movement. This section establishes
-the principle of patient observation before committing capital.
-\end{editornote}
+\vspace{0.5em}
 
 When buying and holding, one must consider the fortune (\jt{運}{un}) and the
 momentum (\jt{気}{ki}). The transport and supply dynamics, whether two
 hundred days or three hundred days, the seasonal movements and annual
 patterns must be compared.
 
-\begin{sourcetext}
 One should not be impatient: observe for two or three days, then when the
 rice begins to move, buy. Those who buy impulsively and hold stubbornly will
 fail. Gold and rice are like flowing water; one must read them well, buy
 carefully, and sell at the right moment.
-\end{sourcetext}
 
 \section{The Tree Diagrams}
 
@@ -567,20 +385,12 @@ carefully, and sell at the right moment.
 \textit{Bank\=o Sh\=onai no Zu --- Diagram of Ten-Thousand-Light Trading}
 \end{center}
 
-\begin{editornote}
-The source text includes tree diagrams illustrating the staged entry method.
-These show how to build positions through numbered stages and how to
-``revolve'' from buying to selling positions. The diagrams are reproduced
-from the original manuscript below.
-\end{editornote}
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{diagrams/fig1_tree_positions.jpg}
-\caption{Position-scaling tree diagrams. Right: building from a 1,000-ry\=o
-base purchase (\jp{千十両買}) through four stages to a 500-ry\=o position
-(\jp{五百両買}). Left: the 100-ry\=o sell diagram (\jp{百両売}) with title
-cartouche \jp{萬光商内之圖}.
+\caption{Position-scaling tree diagrams from the original manuscript.
+Right: building from a 1,000-ry\=o base purchase through four stages.
+Left: the 100-ry\=o sell diagram with title cartouche \jp{萬光商内之圖}.
 \textit{Image: Kyoto University Main Library.}}
 \label{fig:tree1}
 \end{figure}
@@ -588,57 +398,44 @@ cartouche \jp{萬光商内之圖}.
 The secret of profitable trading lies not in any single transaction but in
 the method of building and unwinding positions through stages.
 
-Starting from a base purchase, one builds the position through numbered
-stages:
-
-\begin{sourcetext}
+Starting from a base purchase, build the position through numbered stages.
 Stage One (\jp{壱}): the initial commitment of capital---a small, probing
-entry. This tests the market's direction.\\[0.3em]
-Stage Two (\jp{弐}): when the direction is confirmed, a larger addition.\\[0.3em]
-Stage Three (\jp{参}): further addition as confidence grows.\\[0.3em]
-Stage Four (\jp{四}): the position reaches its full size.
-\end{sourcetext}
+entry that tests the market's direction. Stage Two (\jp{弐}): when the
+direction is confirmed, a larger addition. Stage Three (\jp{参}): further
+addition as confidence grows. Stage Four (\jp{四}): the position reaches
+its full size.
 
-The same principle applies in reverse when selling: one does not liquidate
-the entire position at once but sells in stages, observing the market's
-reaction at each step.
+The same principle applies in reverse when selling: do not liquidate the
+entire position at once but sell in stages, observing the market's reaction
+at each step.
 
-\section{Scaling to Larger Positions: The Turnover Method}
+\section{The Turnover Method}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{diagrams/fig2_tree_scaling.jpg}
-\caption{The scaling diagram: \jp{転愛商内之圖}
-(\textit{Diagram of Revolving Trading}). A 1,000-ry\=o buying position
-(\jp{千両買}) builds through four stages to a 2,000-ry\=o selling position
-(\jp{二千両売}). \textit{Image: Kyoto University Main Library.}}
+\caption{The scaling diagram: \jp{転愛商内之圖}. A 1,000-ry\=o buying
+position builds through four stages to a 2,000-ry\=o selling position.
+\textit{Image: Kyoto University Main Library.}}
 \label{fig:tree2}
 \end{figure}
 
-When buying positions reach their target, one begins to build selling
-positions simultaneously---this is called the ``turnover method''
-(\jt{転換の法}{tenkan no h\=o}).
+When buying positions reach their target, begin to build selling positions
+simultaneously---this is the turnover method (\jt{転換の法}{tenkan no
+h\=o}). For every 1,000 ry\=o in buying positions, prepare to sell 2,000
+ry\=o worth. As the market reaches its peak, the momentum of the crowd
+drives prices beyond fair value. The disciplined trader sells more than he
+bought, profiting from the overshoot.
 
-\begin{sourcetext}
-For every 1,000 ry\=o in buying positions, prepare to sell 2,000 ry\=o
-worth. The reasoning: as the market reaches its peak, the momentum of the
-crowd drives prices beyond fair value. At this point, the disciplined trader
-sells more than he bought, profiting from the overshoot.
-\end{sourcetext}
-
-\begin{sourcetext}
 When traders buy at low prices and see profits growing, they become greedy
 and wish to hold longer. When they see losses, they become fearful and wish
-to sell at once. Both impulses are the enemy of profit.\\[0.5em]
-The disciplined trader sells when he wishes to hold, and holds when he
-wishes to sell---going against his own emotions as well as those of the crowd.
-\end{sourcetext}
+to sell at once. Both impulses are the enemy of profit. The disciplined
+trader sells when he wishes to hold, and holds when he wishes to sell---going
+against his own emotions as well as those of the crowd.
 
-This art was not to be shared lightly. It was passed down within the family
+This art is not to be shared lightly. It is passed down within the family
 and among trusted associates only.
 
-% =============================================================================
-% CHAPTER 4: SIXTY-YEAR CYCLE (EXPANDED)
 % =============================================================================
 \chapter{The Sixty-Year Cycle: Weather, Tides, and Harvest}
 
@@ -647,155 +444,98 @@ and among trusted associates only.
 \textit{Record of Storms, Fortune-Qi, and Abundance or Famine}
 \end{center}
 
-\vspace{1em}
-
-\begin{editornote}
-This chapter presents the text's weather-forecasting apparatus---an
-elaborate system correlating the Chinese sexagenary calendar with weather
-patterns, harvest outcomes, and market cycles. Two hundred and thirty years
-of records were consulted to build these correlations.
-\end{editornote}
+\vspace{0.5em}
 
 A twelve-year sub-cycle governs the alternation of fortune and misfortune in
-harvests.\tn{The sexagenary cycle (\jp{干支}, \textit{kanshi} or
-\textit{eto}) combines the ten Heavenly Stems and twelve Earthly Branches to
-produce a sixty-year cycle. Each year has a unique two-character designation
-(e.g., \jp{甲子}, \textit{kinoe-ne}). This system was used across East Asia
-for calendrical and divinatory purposes.}
+harvests. Two hundred and thirty years of records were consulted, tracking
+patterns of weather and their correlation with the sexagenary
+cycle.\tn{The sexagenary cycle (\jp{干支}, \textit{kanshi}) combines the
+ten Heavenly Stems and twelve Earthly Branches to produce a sixty-year
+cycle. Each year has a unique two-character designation (e.g., \jp{甲子},
+\textit{kinoe-ne}).}
 
 \section{Violent Storms}
 
-In certain years of the cycle, violent storms and market surges are more
-frequent:
-
-\begin{quote}
-\jp{甲子}, \jp{丁卯}, \jp{丁未}, \jp{甲戌}, \jp{甲申}, \jp{辛卯}, \jp{甲午}
-\end{quote}
-
-In these years, rice markets experience extreme volatility; prices may surge
-two or three times within a single season. Traders must be especially
-cautious.
+In certain years, violent storms and market surges are more frequent:
+\jp{甲子}, \jp{丁卯}, \jp{丁未}, \jp{甲戌}, \jp{甲申}, \jp{辛卯},
+\jp{甲午}. In these years, rice markets experience extreme volatility;
+prices may surge two or three times within a single season.
 
 \section{Floods}
 
 Years containing \jp{己} (\textit{tsuchinoto}) in their stem are associated
-with water disasters:
-
-\begin{quote}
-\jp{己巳}, \jp{己卯}, \jp{己丑}, \jp{己亥}, \jp{己酉}, \jp{己未}
-\end{quote}
-
-These bring three-year periods of disruption. Rice prices respond sharply.
+with water disasters: \jp{己巳}, \jp{己卯}, \jp{己丑}, \jp{己亥},
+\jp{己酉}, \jp{己未}. These bring three-year periods of disruption.
 
 \section{Frost and Cold}
 
 Unusual cold damages crops and triggers three-year adverse periods. Rice
-prices rise sharply in response.
+prices rise sharply.
 
 \section{Bountiful Harvest Years}
 
-Years of expected bountiful harvest (\jt{豊作}{h\=osaku}) were tracked across
-twenty-eight years of records and correlated with the sexagenary years. In
-autumn months, the yields were logged, producing a predictive framework
+Years of bountiful harvest (\jt{豊作}{h\=osaku}) were tracked across
+twenty-eight years of records and correlated with the sexagenary cycle. In
+autumn months, yields were logged, producing a predictive framework
 spanning the full sixty-year cycle.
 
 \section{The Plum Rains}
 
-The onset of the \textit{tsuyu} (\jp{梅雨}) rainy season follows an
-approximately eight-year sub-cycle:
+The onset of the plum rain season (\jt{梅雨}{tsuyu}) follows an
+approximately eight-year sub-cycle. Early plum rains generally indicate good
+harvests. Late plum rains may indicate drought followed by flooding.
 
-\begin{sourcetext}
-Early plum rains generally indicate good harvests.\\
-Late plum rains may indicate drought followed by flooding.
-\end{sourcetext}
+Associated years: \jp{丙寅}, \jp{丙子}, \jp{庚辰}, \jp{庚寅}, \jp{壬午},
+\jp{壬辰}, \jp{丙申}, \jp{丙午}.
 
-Associated years in the cycle:
-\begin{quote}
-\jp{丙寅}, \jp{丙子}, \jp{庚辰}, \jp{庚寅},
-\jp{壬午}, \jp{壬辰}, \jp{丙申}, \jp{丙午}
-\end{quote}
-
-\section{Tidal Patterns}
+\section{Tides}
 
 \begin{center}
-\jp{大潮小潮之差} --- \textit{\=Oshio Koshio no Sa}\\
-\textit{The Difference Between Spring Tides and Neap Tides}
+\jp{大潮小潮之差} --- \textit{The Difference Between Spring and Neap Tides}
 \end{center}
 
-The tidal patterns of spring tides (\jt{大潮}{\=oshio}) and neap tides
-(\jt{小潮}{koshio}) are analyzed in relation to weather prediction. In years
-of great tidal difference, storms are more likely. The timing of tides in
-relation to planting and harvesting seasons provides further indicators for
-the harvest forecast.
+\vspace{0.5em}
 
-\section{Wind Patterns}
+The patterns of spring tides (\jt{大潮}{\=oshio}) and neap tides
+(\jt{小潮}{koshio}) bear on weather prediction. In years of great tidal
+difference, storms are more likely. The timing of tides in relation to
+planting and harvesting seasons provides further indicators.
 
-\begin{center}
-\jp{風} --- \textit{Kaze}
-\end{center}
+\section{Wind}
 
-Wind direction and timing across the cycle:
+Wind direction and timing follow their own cycles: \jp{戊申}, \jp{己卯},
+\jp{丙辰}, \jp{丁巳}, \jp{庚申}. In years of strong autumn wind, harvest
+damage increases. The period between the seventh and ninth months is
+critical.
 
-\begin{quote}
-\jp{戊申}, \jp{己卯}, \jp{丙辰}, \jp{丁巳}, \jp{庚申}
-\end{quote}
-
-In years of strong autumn wind, harvest damage increases. The period
-between the seventh and ninth months is critical. Wind from certain
-directions at certain times predicts the harvest outcome.
-
-\begin{sourcetext}
 A ten-year or fifteen-year span governs the wind's major directional shifts.
 Across one hundred years of observation, these cycles hold with reasonable
 reliability---roughly one year of error in every ten.
-\end{sourcetext}
 
-% =============================================================================
-% CHAPTER 5: EIGHT POLES AND SIX OBSERVATIONS
 % =============================================================================
 \chapter{The Eight Poles, Celestial Signs, and the Six Observations}
 
 \section{The Eight Poles}
 
 \begin{center}
-\jp{八極 三千目}\\
-\textit{Hakkyoku Sanzenme --- Eight Poles, Three Thousand Points}
+\jp{八極 三千目} --- \textit{Eight Poles, Three Thousand Points}
 \end{center}
 
-\begin{editornote}
-The ``eight poles'' represent the outermost boundaries of market
-behavior---the extremes beyond which a reversal is inevitable. The text
-presents them alongside observations on crowd psychology and celestial
-anomalies.
-\end{editornote}
+\vspace{0.5em}
 
-The categories of market force are classified:
+The categories of market force: Yang (\jp{陽})---the bullish, rising force.
+Yin (\jp{陰})---the bearish, falling force. The Supreme Ultimate
+(\jp{太極})---equilibrium. Yin convergence (\jp{陰合})---multiple bearish
+factors aligning at once.
 
-\begin{itemize}[leftmargin=2em]
-\item \jt{陽}{Y\=o} --- Yang: the bullish, rising force.
-\item \jt{陰}{In} --- Yin: the bearish, falling force.
-\item \jt{太極}{Taikyoku} --- Supreme Ultimate: the equilibrium point.
-\item \jt{陰合}{Ing\=o} --- Yin convergence: multiple bearish factors
-  aligning simultaneously.
-\end{itemize}
-
-\subsection{The General's Campaign}
-
-\begin{sourcetext}
 Just as a general must commit his forces decisively at the right moment, the
 trader must commit capital when the signs align. Hesitation at the critical
 moment means the opportunity passes.
-\end{sourcetext}
 
-\subsection{The Unanimity Signal}
-
-\begin{sourcetext}
 When ten thousand people are all of one mind---all buying or all
-selling---the reversal is near.\\[0.3em]
-A thousand people of the same opinion is a strong signal.\\
-Ten thousand unanimous is an extreme.\\
-At such moments, the solitary trader who goes against them has the advantage.
-\end{sourcetext}
+selling---the reversal is near. A thousand people of the same opinion is a
+strong signal. Ten thousand unanimous is an extreme. At such moments, the
+solitary trader who goes against them has the advantage.
 
 \section{Celestial Anomalies}
 
@@ -803,86 +543,72 @@ At such moments, the solitary trader who goes against them has the advantage.
 \jp{天怪} --- \textit{Tenkai}
 \end{center}
 
-When extraordinary signs appear---unusual weather, disruptions to the normal
-seasonal flow---the trader must first determine whether these are temporary
-or lasting in their effect. The standard rice price across months, the
-ordinary level (\jt{普通}{futsū}), is established over a year, and only
-deviations from this level are traded.
+\vspace{0.5em}
 
-\section{The Six Secret Observations}
+When extraordinary signs appear---unusual weather, disruptions to the normal
+seasonal flow---first determine whether these are temporary or lasting in
+their effect. The ordinary rice price level is established over a year, and
+only deviations from this level are traded.
+
+\section{The Six Observations}
 
 \begin{center}
 \jp{六秘見} --- \textit{Roku Hiken}
 \end{center}
 
-\begin{editornote}
-The ``Six Observations'' provide a structured checklist for evaluating any
-trading opportunity. They appear in the source text as a numbered framework
-preceding a discussion of proportional entry.
-\end{editornote}
+\vspace{0.5em}
 
-When watching the rice market, one must first observe these six things:
+When watching the rice market, first observe these six
+things:\tn{These six observations form a structured checklist---essentially
+a pre-trade evaluation framework.}
 
 \begin{enumerate}[leftmargin=2em]
-\item \jt{二割}{ni-wari} --- \textbf{the 20\% level}: if rice falls 20\%
-  from its high, this is a meaningful correction.
-\item \jt{三割}{san-wari} --- \textbf{the 30\% level}: a major correction
-  inviting careful buying.
-\item \jt{高の内}{taka no uchi} --- \textbf{within the high range}:
-  movements here are distribution, not accumulation.
-\item \jt{横の平}{yoko no hira} --- \textbf{sideways movement}: the market
-  is undecided; wait.
-\item \jt{人の気}{hito no ki} --- \textbf{people's sentiment}: the crowd's
-  mood as a contrary indicator.
-\item \jt{大勢}{taisei} --- \textbf{the grand trend}: the overarching
-  direction that governs all shorter movements.
+\item The 20\% level (\jt{二割}{ni-wari}): if rice falls 20\% from its
+  high, this is a meaningful correction.
+\item The 30\% level (\jt{三割}{san-wari}): a major correction inviting
+  careful buying.
+\item Within the high range (\jt{高の内}{taka no uchi}): movements here
+  are distribution, not accumulation.
+\item Sideways movement (\jt{横の平}{yoko no hira}): the market is
+  undecided; wait.
+\item People's sentiment (\jt{人の気}{hito no ki}): the crowd's mood
+  as a contrary indicator.
+\item The grand trend (\jt{大勢}{taisei}): the overarching direction
+  that governs all shorter movements.
 \end{enumerate}
 
-These six observations determine all trading. When a person wishes to buy,
-he should first check whether the price has already risen 20--30\% from its
-base. If it has, the opportunity for buying has passed; one must wait for
-the next decline.
+These six observations determine all trading. When wishing to buy, first
+check whether the price has already risen 20--30\% from its base. If it has,
+the opportunity for buying has passed; wait for the next decline.
 
-\begin{sourcetext}
-All buying and selling should be done proportionally. When buying, one
-should think of mountains---rice is like mountains and water; it naturally
-rises and falls. The great mountain does not rise in a day, and neither does
-the great price movement. One should buy in portions: first a small amount,
-then add as the direction confirms.
-\end{sourcetext}
+All buying and selling should be done proportionally. When buying, think of
+mountains---rice is like mountains and water; it naturally rises and falls.
+The great mountain does not rise in a day, and neither does the great price
+movement. Buy in portions: first a small amount, then add as the direction
+confirms.
 
-\begin{sourcetext}
 When a thousand people are of one mind regarding the market, and a single
 trader perceives something different, he must weigh his own observation
 against the crowd's. If his reasoning is sound and based on the six
 observations, he may be right even against one thousand.
-\end{sourcetext}
 
-% =============================================================================
-% CHAPTER 6: THE FOUR VIRTUES
 % =============================================================================
 \chapter{The Four Virtues of the Trader}
 
-\begin{editornote}
-The source text organizes its deepest teachings on trading conduct around
-Confucian virtues. Four are treated explicitly: Benevolence, Wisdom,
-Courage, and Discipline. The traditional Confucian system names five
-constant virtues (\jp{五常}, \textit{goj\=o}), the fifth being
+\tn{The source text names four virtues: Benevolence (\jp{仁}), Wisdom
+(\jp{智}), Courage (\jp{勇}), and Discipline (\jp{節}). The traditional
+Confucian system names five constant virtues (\jp{五常}), the fifth being
 Trustworthiness (\jp{信}, \textit{shin}). Whether the fifth was omitted
 deliberately, lost in transmission, or treated elsewhere in the tradition
-under a different framing is unknown from this manuscript alone.
-\end{editornote}
+is unknown from this manuscript.}
 
 \section{Benevolence (\jp{仁}, \textit{Jin})}
 
-\begin{sourcetext}
 Buy once, and it returns to its original level. Wait.
-\end{sourcetext}
 
-When one buys and the price immediately returns to the purchase level, one
-must not panic and sell at cost. The market is testing the trader's resolve.
-This is the test of benevolence---patience and compassion for one's own
-position.
+When one buys and the price immediately returns to the purchase level, do
+not panic and sell at cost. The market is testing the trader's resolve. This
+is the test of benevolence---patience and compassion for one's own position.
 
 If after buying, the price falls and then recovers to near the purchase
 price, this pattern---repeated over three years---teaches the trader to
@@ -891,38 +617,29 @@ bad time eventually proved profitable for those who held.
 
 \subsection{On Upper, Middle, and Lower Positions}
 
-\begin{itemize}[leftmargin=2em]
-\item \textbf{Upper level} (\jt{上位}{j\=oi}): rice has risen strongly and
-  is at the top of its range. \textit{One should be selling, not buying.}
-\item \textbf{Middle level} (\jt{中位}{ch\=ui}): rice is at its ordinary
-  seasonal level. \textit{Wait and observe.}
-\item \textbf{Lower level} (\jt{下位}{gei}): rice has fallen to the bottom
-  of its range. \textit{This is where buying begins.}
-\end{itemize}
+At the upper level (\jt{上位}{j\=oi}), rice has risen strongly and is at
+the top of its range. One should be selling, not buying. At the middle
+level (\jt{中位}{ch\=ui}), rice is at its ordinary seasonal level; wait
+and observe. At the lower level (\jt{下位}{gei}), rice has fallen to the
+bottom of its range. This is where buying begins.
 
-\begin{sourcetext}
 When the price has been at a low level for three hundred days or more, and a
 rise begins, and then the price returns and falls again to a new low---this
 is the final bottom. Buy here.
-\end{sourcetext}
 
 \section{Wisdom (\jp{智}, \textit{Chi})}
 
-Wisdom in trading encompasses knowing when to enter, knowing when to exit,
-reading the mood of the market, understanding seasonal patterns, and
-patience in waiting for the right moment.
+Wisdom in trading: knowing when to enter, knowing when to exit, reading the
+mood of the market, understanding seasonal patterns, patience in waiting for
+the right moment.
 
 The relationship between different regional markets---D\=ojima, Bakan, and
 others---creates timing advantages. Information flows between them with
 delay; the trader who understands this flow profits from the gap.
 
 When favorable conditions turn and the market reverses, the signs are subtle
-at first:
-
-\begin{sourcetext}
-The price may stop rising for several days; then a slight decline sets in.
-Those who recognize this early transition profit the most.
-\end{sourcetext}
+at first. The price may stop rising for several days; then a slight decline
+sets in. Those who recognize this early transition profit the most.
 
 \section{Courage (\jp{勇}, \textit{Y\=u})}
 
@@ -932,82 +649,58 @@ courage is paralysis.
 
 \section{Discipline (\jp{節}, \textit{Setsu})}
 
-Following the method even when emotions urge otherwise.
+Following the method even when emotions urge otherwise. The cautious man who
+holds stable reserves of twenty tawara and trades with five will survive all
+storms. He who trades with his entire fortune will eventually be ruined.
 
-\begin{sourcetext}
-The cautious man who holds stable reserves of twenty tawara and trades with
-five will survive all storms. He who trades with his entire fortune will
-eventually be ruined.
-\end{sourcetext}
-
-% =============================================================================
-% CHAPTER 7: THREE LEVELS AND MIDDLE STAR
 % =============================================================================
 \chapter{The Three Levels and the Middle Star}
 
 \begin{center}
 \jp{世の中 三段之圖}\\
-\textit{Yo no Naka Sandan no Zu --- Diagram of the Three Levels of the World}
+\textit{Diagram of the Three Levels of the World}
 \end{center}
-
-\vspace{1em}
-
-\begin{editornote}
-This chapter contains the core analytical framework of the entire system:
-the division of market prices into three levels, with the ``Middle Star''
-as the central reference point.
-\end{editornote}
-
-\section{The Diagram}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.55\textwidth]{diagrams/fig3_three_levels.jpg}
 \caption{The Three Levels Diagram (\jp{世の中三段之圖}). The circle is
-divided into Upper (\jp{上}, 35 tawara), Middle (\jp{中}, 30 tawara plus
-1 bu), and Lower (\jp{下}, 25 tawara). Below: the Ceiling (\jp{天井}),
-Floor (\jp{底直}), and Middle Star (\jp{中星}) reference points with their
-associated price tables. \textit{Image: Kyoto University Main Library.}}
+divided into Upper (\jp{上}), Middle (\jp{中}), and Lower (\jp{下}).
+Below: the Ceiling (\jp{天井}), Floor (\jp{底直}), and Middle Star
+(\jp{中星}) reference points. \textit{Image: Kyoto University Main Library.}}
 \label{fig:threelevels}
 \end{figure}
 
 \section{The Three Levels}
 
-The rice market at any moment exists within one of three ranges:
-
-\begin{itemize}[leftmargin=2em]
-\item \textbf{Upper} (\jp{上}): approximately 35 tawara level---the ceiling
-  range where selling is indicated.
-\item \textbf{Middle} (\jp{中}): approximately 30 tawara, 1 bu---the
-  equilibrium range where one observes and waits.
-\item \textbf{Lower} (\jp{下}): approximately 25 tawara level---the floor
-  range where buying is indicated.
-\end{itemize}
+The rice market at any moment exists within one of three ranges. The upper
+level: approximately 35 tawara---the ceiling range where selling is
+indicated. The middle level: approximately 30 tawara, 1 bu---equilibrium,
+where one observes and waits. The lower level: approximately 25 tawara---the
+floor range where buying is indicated.
 
 \section{The Middle Star}
 
 The \jt{中星}{ch\=uboshi}, or ``Middle Star,'' is the central concept.
 Across thirty years of observation, the average rice price establishes a
-central equilibrium---the middle star.\tn{This is essentially a moving
-average concept. The ``thirty years'' likely refers to the observational
-dataset used. The principle---trading deviations from a long-term
-mean---is the foundation of modern mean-reversion strategies.}
+central equilibrium.\tn{This is essentially a moving average concept. The
+principle---trading deviations from a long-term mean---is the foundation of
+modern mean-reversion strategies.}
 
-\begin{sourcetext}
-When price is at the middle star: observe and wait.\\
-When price falls to twenty percent below the middle star: begin buying.\\
-When price rises to twenty percent above the middle star: begin selling.
-\end{sourcetext}
+When price is at the middle star: observe and wait. When price falls to
+twenty percent below the middle star: begin buying. When price rises to
+twenty percent above the middle star: begin selling.
 
 In a year of abundant harvest, the direct price falls to the middle star or
-below. One should buy at this point and hold, as in subsequent years the
-price will revert.
+below. Buy at this point and hold, as in subsequent years the price will
+revert.
 
 \section{Position Calculations at the Middle Star}
 
-The source text devotes several pages to detailed numerical examples of
-position-building at the middle star level. These tables show how capital
-compounds through staged entry at each confirmation point.
+[The source text devotes approximately six pages to detailed numerical
+tables showing staged position-building at the middle star level. The
+method is demonstrated at 100, 200, 300, 500, and 1,000 ry\=o capital
+levels. The following are representative examples.]
 
 \subsection{Trading with 100 Ry\=o}
 
@@ -1015,52 +708,48 @@ compounds through staged entry at each confirmation point.
 \jp{百両売 天之商内} --- \textit{Selling with 100 Ry\=o, Within Heaven's Trading}
 \end{center}
 
-Starting from a base of 100 ry\=o at the middle star (\jp{中星世俵}) level:
+\vspace{0.5em}
 
-\begin{sourcetext}
+Starting from a base of 100 ry\=o at the middle star level:
+
 Stage One (\jp{壱}): 100 ry\=o committed, purchasing 20 tawara at the
-middle star level. This is the probing entry.\\[0.3em]
-Stage Two (\jp{弐}): A further 100 ry\=o committed as direction
+middle star level. This is the probing entry.
+
+Stage Two (\jp{弐}): a further 100 ry\=o committed as direction
 confirms---position now 200 ry\=o, approximately 20 tawara held. At a
-10\% gain (\jp{一割}), the profit is reinvested.\\[0.3em]
-Stage Three (\jp{参}): Position built to 300 ry\=o. At the middle star,
-this commands an expanded tawara position. Compounding accelerates.\\[0.3em]
-Stage Four (\jp{四}): Full position reached at 400 ry\=o capital committed.
+10\% gain (\jp{一割}), the profit is reinvested.
+
+Stage Three (\jp{参}): position built to 300 ry\=o. At the middle star,
+this commands an expanded tawara position. Compounding accelerates.
+
+Stage Four (\jp{四}): full position reached at 400 ry\=o capital committed.
 Through compounding of profits at each stage, the effective exposure has
 grown to approximately 800 ry\=o---doubling the original capital through
 disciplined staged entry.
-\end{sourcetext}
 
 \subsection{Scaling to 1,000 Ry\=o}
 
-The text extends the same method to larger capital bases, with the
-proportional discipline becoming even more critical:
+Stage One (\jp{壱}): 1,000 ry\=o over half a year (\jp{半年千両}). First
+entry at 10\% (\jp{一割})---committing only 100 ry\=o initially.
 
-\begin{sourcetext}
-Stage One (\jp{壱}): 1,000 ry\=o over half a year (\jp{半年千両}).
-First entry at 10\% (\jp{一割})---committing only 100 ry\=o initially.\\[0.3em]
-Stage Two (\jp{弐}): At 20\% confirmation (\jp{二割}), add 100 ry\=o.
-Middle star level maintained. Running total through 14 tawara positions.\\[0.3em]
-Stage Three (\jp{参}): At 20\%, further 300 ry\=o committed. Position
-accumulates at the middle star level.\\[0.3em]
-Stage Four (\jp{四}): At 20\%, the accumulated position reaches 14 tawara
+Stage Two (\jp{弐}): at 20\% confirmation (\jp{二割}), add 100 ry\=o.
+Middle star level maintained. Running total through 14 tawara positions.
+
+Stage Three (\jp{参}): at 20\%, further 300 ry\=o committed. Position
+accumulates at the middle star level.
+
+Stage Four (\jp{四}): at 20\%, the accumulated position reaches 14 tawara
 at full commitment. Total effective position: approximately 800 ry\=o in
-profit across the staged entries.\\[0.3em]
-Stage Five (\jp{五}): At 30\% (\jp{三割}), the final stage---the full
+profit across the staged entries.
+
+Stage Five (\jp{五}): at 30\% (\jp{三割}), the final stage---the full
 cycle is complete.
-\end{sourcetext}
 
-\begin{editornote}
-The source text continues with further calculation tables covering
-intermediate capital levels (200, 300, 500 ry\=o) and varying numbers of
-stages, all following the same proportional method. The key principle is
-constant: never commit the full position at once, and reinvest profits at
-each stage to compound returns. The original tables occupy approximately
-six pages of the manuscript.
-\end{editornote}
+[The source text continues with further calculation tables at 200, 300,
+and 500 ry\=o, all following the same proportional method. The key principle
+is constant: never commit the full position at once, and reinvest profits at
+each stage to compound returns.]
 
-% =============================================================================
-% CHAPTER 8: SEVEN FORTUNES AND FOLLOWING GOLD
 % =============================================================================
 \chapter{The Seven Fortunes Secret; Following Gold}
 
@@ -1068,45 +757,40 @@ six pages of the manuscript.
 
 \begin{center}
 \jp{七福即宝秘密}\\
-\textit{Shichifuku Sokuh\=o Himitsu}
+\textit{Shichifuku Sokuh\=o Himitsu --- Seven Fortunes, Instant Treasure Secret}
 \end{center}
 
-\begin{editornote}
-This section reveals what the text presents as its core secret: seven
-conditions that, when simultaneously present, indicate a high-probability
-trade.
-\end{editornote}
+\vspace{0.5em}
 
-The trader must observe:
+The seven fortunes are seven conditions that, when all present
+simultaneously, indicate a high-probability trade. The trader must observe:
 
 \begin{enumerate}[leftmargin=2em]
-\item The \textbf{seasonal cycle} is favorable.
-\item The price is \textbf{at or below the middle star}.
-\item Market \textbf{sentiment is bearish}---the crowd is selling.
-\item The \textbf{harvest forecast} supports the position.
-\item The \textbf{momentum} of recent days confirms a reversal.
-\item One's own \textbf{capital is sufficient} to hold through adversity.
-\item The \textbf{fortune-qi} (\jt{運気}{unki}) of the year aligns.
+\item The seasonal cycle is favorable.
+\item The price is at or below the middle star.
+\item Market sentiment is bearish---the crowd is selling.
+\item The harvest forecast supports the position.
+\item The momentum of recent days confirms a reversal.
+\item One's own capital is sufficient to hold through adversity.
+\item The fortune-qi (\jt{運気}{unki}) of the year aligns.
 \end{enumerate}
 
-When all seven align, one buys with full conviction through the staged
-method.
-
-\begin{sourcetext}
+When all seven align, buy with full conviction through the staged method.
 This is the ``instant treasure'' (\jp{即宝})---not that wealth comes
 instantly, but that the recognition of the opportunity must be instant and
 decisive.
-\end{sourcetext}
 
 \section{On Patience and Money}
 
-\begin{sourcetext}
 There is a saying: ``The money that was thought lost returns after three
 years.'' In trading, positions that seem like losses in the short term often
 prove profitable in the long term---if the fundamental analysis was correct.
 The error is not in the analysis but in the trader's inability to endure the
 interim.
-\end{sourcetext}
+
+The cautious trader who holds stable reserves and trades with only a portion
+of his capital will survive all storms. He who trades with his entire
+fortune will eventually be ruined.
 
 \section{Following Gold}
 
@@ -1114,151 +798,115 @@ interim.
 \jp{随金 商内} --- \textit{Zuikin Sh\=onai --- Following Gold in Trading}
 \end{center}
 
-\begin{sourcetext}
-One's trading should follow where capital naturally flows. Do not fight the
-movement of gold---instead, observe where it concentrates and follow it there.
-\end{sourcetext}
+\vspace{0.5em}
 
-\begin{editornote}
-The distinction here is subtle but important: ``following gold'' does not
-mean following the crowd's \textit{opinion}. It means following the actual
-flow of \textit{capital}. The crowd may say one thing while their money does
-another.
-\end{editornote}
+One's trading should follow where capital naturally flows. Do not fight the
+movement of gold---instead, observe where it concentrates and follow it
+there.\tn{The distinction is subtle: ``following gold'' does not mean
+following the crowd's \textit{opinion}. It means following the actual flow
+of \textit{capital}. The crowd may say one thing while their money does
+another.}
 
 Gold and goods move in opposite directions. When gold is plentiful and goods
 scarce, prices rise. When goods are plentiful and gold scarce, prices fall.
+This is obvious, yet in the heat of trading, men forget this fundamental
+law.
 
-\begin{sourcetext}
 When one has entered a position and the market moves sideways for many days,
 doing nothing, the impulse to act grows unbearable. This is the critical
 test. The trader who exits from boredom or impatience will miss the eventual
 move.
-\end{sourcetext}
 
-% =============================================================================
-% CHAPTER 9: THE GRAND DIAGRAM
 % =============================================================================
 \chapter{The Grand Diagram}
 
 \begin{center}
 \jp{三割上下割之圖}\\
-\textit{Sanwari J\=oge Wari no Zu --- Diagram of the Three-Part Upper and Lower Division}
+\textit{Diagram of the Three-Part Upper and Lower Division}
 \end{center}
-
-\vspace{1em}
-
-\begin{editornote}
-This diagram is the visual synthesis of the entire trading system, combining
-seasonal cycles, price levels, and the Yin-Yang framework into a single
-reference chart. The source text calls it the \jp{中星圓珠秘象}
-(``Middle Star Round Jewel Secret Image'').
-\end{editornote}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{diagrams/fig4_grand_chart.jpg}
-\caption{The Grand Diagram (\jp{三割上下割之圖}). \textbf{Center}:
-\jp{中星廿俵} (Middle Star, 20 tawara) as the equilibrium point.
-Twelve positions radiate outward representing the months, each annotated
-with the expected tawara level and trading action. \textbf{Bottom left}:
-\jp{陰} (Yin) with the Eight Poles---selling positions at 25, 24, 22, 21
-tawara levels. \textbf{Bottom right}: \jp{陽} (Yang)---buying positions at
-14, 17, 18, 19 tawara. The notation \jp{天明古写本} indicates the
-Tenmei-era source manuscript. Annotated \jp{平の三割高下の割＝校正補}
-(``Three-part division of prices, high and low---revised supplement'').
-\textit{Image: Kyoto University Main Library.}}
+\caption{The Grand Diagram (\jp{三割上下割之圖}). Center: \jp{中星廿俵}
+(Middle Star, 20 tawara). Twelve positions radiate outward representing
+the months. Bottom left: \jp{陰} (Yin)---selling positions. Bottom right:
+\jp{陽} (Yang)---buying positions. Notation \jp{天明古写本} indicates the
+Tenmei-era source. \textit{Image: Kyoto University Main Library.}}
 \label{fig:grandchart}
 \end{figure}
 
-\section{How to Read the Diagram}
+\vspace{0.5em}
 
-The upper half of the diagram represents the Yang months---spring and
-summer, the period of growth and rising. The lower half represents the Yin
-months---autumn and winter, harvest and falling.
+[This diagram, which the source text calls the \jp{中星圓珠秘象}
+(``Middle Star Round Jewel Secret Image''), is the visual synthesis of the
+entire trading system.]
 
-At each month's position, the diagram shows: the expected tawara level, the
-indicated trading action, and the relationship to the middle star.
+The upper half represents the Yang months---spring and summer, the period of
+growth and rising. The lower half represents the Yin months---autumn and
+winter, harvest and falling.
 
-\begin{sourcetext}
+At each month's position: the expected tawara level, the indicated trading
+action, and the relationship to the middle star.
+
 In the four directions---representing the four seasons---combine the
 seasonal tendency with the harvest forecast. When buying in spring, confirm
 the middle star, then enter at the ten-percent level.
-\end{sourcetext}
 
-% =============================================================================
-% CHAPTER 10: STRONG AND WEAK QI
 % =============================================================================
 \chapter{Reading Strong and Weak Qi}
 
 \section{The Beginning of Strong Qi}
 
-\begin{sourcetext}
 When strong qi first emerges, the signs are these: a ten-percent rise from
-the bottom; people are still bearish; news is still negative; yet the price
-has stopped falling and begins to creep upward.\\[0.5em]
-This is the critical moment to begin buying.
-\end{sourcetext}
+the bottom. People are still bearish. News is still negative. Yet the price
+has stopped falling and begins to creep upward. This is the critical moment
+to begin buying.
 
 \section{The Beginning of Weak Qi}
 
-\begin{sourcetext}
 A small decline from a sustained high. People are still bullish. Good news
-continues. Yet the price stops rising and begins to soften.\\[0.5em]
-This is when selling should begin.
-\end{sourcetext}
+continues. Yet the price stops rising and begins to soften. This is when
+selling should begin.
 
 Just as strong qi begins silently amid pessimism, weak qi begins silently
 amid optimism. The symmetry is exact.
 
 \section{The Great First Decline}
 
-\begin{sourcetext}
 The first drop is sharp and frightening. Panic selling follows. But the
-first major drop is rarely the final bottom.\\[0.5em]
-After the panic subsides, a temporary recovery occurs. Then the slower,
-grinding decline continues to the true bottom.
-\end{sourcetext}
+first major drop is rarely the final bottom. After the panic subsides, a
+temporary recovery occurs. Then the slower, grinding decline continues to
+the true bottom.\tn{This three-phase pattern---sharp drop, bounce, slow
+grind---closely resembles Dow Theory's description of bear market stages,
+formulated by Charles Dow roughly fifty years later in the 1890s--1900s.}
 
-This pattern---sharp drop, bounce, slow grind---repeats across all markets
-and all eras.\tn{This three-phase decline pattern is remarkably similar to
-Dow Theory's description of bear market stages, formulated by Charles Dow
-roughly fifty years later, and to modern descriptions of market crash
-anatomy.} Patience is required to wait for the true bottom rather than
-buying the first panic.
+Patience is required to wait for the true bottom rather than buying the
+first panic.
 
 \section{Wind and Rain}
 
-\begin{sourcetext}
 When a storm comes and the ship is at sea, one cannot change the wind. But
-one can adjust the sails.\\[0.5em]
-Similarly, when market conditions shift suddenly, one cannot change the
-conditions, but one can adjust the position.
-\end{sourcetext}
+one can adjust the sails. Similarly, when market conditions shift suddenly,
+one cannot change the conditions, but one can adjust the position.
 
 The four seasons each bring their own storms. The trader who anticipates
 them is rarely caught off guard.
 
-% =============================================================================
-% CHAPTER 11: REGIONAL MARKETS AND FINAL TEACHINGS
 % =============================================================================
 \chapter{Regional Markets and Final Teachings}
 
 \section{The Geography of Information}
 
 Osaka's D\=ojima exchange is the central rice market; all other regional
-prices reference it. Information flows outward from Osaka to the provinces,
+prices reference it. Information from Osaka flows outward to the provinces,
 and the gap between Osaka and provincial prices creates trading
-opportunities.
-
-\begin{sourcetext}
-The trader in the provinces who knows the Osaka price has an advantage over
-one who knows only local prices.
-\end{sourcetext}
+opportunities. The trader in the provinces who knows the Osaka price has an
+advantage over one who knows only local prices.
 
 Eastern provinces and western provinces have different harvest cycles. When
 eastern harvests are poor but western harvests are good, the price in Osaka
-reflects the average. A trader who can read the signs in the fields before
+reflects the average. The trader who can read the signs in the fields before
 the market knows has the greatest advantage.
 
 \section{The Essence of the Teaching}
@@ -1267,33 +915,35 @@ In all the world's markets, the rice market is the foundation. What has
 been written in this record is the accumulated observation of
 generations---the secret teachings of the house, refined and corrected.
 
-\begin{sourcetext}
 The market is not a place of chance but of pattern. Those who study the
 patterns---of seasons, of cycles, of human sentiment---can trade with the
-odds in their favor.\\[0.5em]
-But even the most learned trader will sometimes be wrong, and the method of
-staged entry and proportional trading exists precisely for this reason: to
-survive being wrong while maximizing the benefit of being right.
-\end{sourcetext}
+odds in their favor. But even the most learned trader will sometimes be
+wrong, and the method of staged entry and proportional trading exists
+precisely for this reason: to survive being wrong while maximizing the
+benefit of being right.
 
-\section{The Four Virtues, Restated}
+One should approach the market with the same virtues that govern all of
+life:
 
-\begin{sourcetext}
-\jt{仁}{Jin} --- Benevolence: patience and compassion for one's own errors.\\
-\jt{智}{Chi} --- Wisdom: study and observation before action.\\
-\jt{勇}{Y\=u} --- Courage: acting decisively when the signs align.\\
-\jt{節}{Setsu} --- Discipline: following the method even when emotions urge
-otherwise.\\[0.5em]
-The trader who embodies all four virtues will prosper across generations.\\
-The trader who relies on any one alone will eventually fail.\\[0.5em]
+\jp{仁} --- Benevolence: patience and compassion for one's own errors.
+
+\jp{智} --- Wisdom: study and observation before action.
+
+\jp{勇} --- Courage: acting decisively when the signs align.
+
+\jp{節} --- Discipline: following the method even when emotions urge
+otherwise.
+
+The trader who embodies all four virtues will prosper across generations.
+The trader who relies on any one alone will eventually fail.
+
 This record should not be shared carelessly. It represents a
 lifetime---indeed, many lifetimes---of observation, and its value lies not
-merely in the rules but in the understanding behind them.\\[0.5em]
-A rule without understanding is dangerous;\\
-understanding without discipline is useless.\\[0.5em]
-To the reader who has studied this record thoroughly:\\
-may you trade with wisdom and prosper.
-\end{sourcetext}
+merely in the rules but in the understanding behind them. A rule without
+understanding is dangerous; understanding without discipline is useless.
+
+To the reader who has studied this record thoroughly: may you trade with
+wisdom and prosper.
 
 \begin{flushright}
 \jp{鳴川猛之助}\\
@@ -1301,8 +951,6 @@ may you trade with wisdom and prosper.
 \textit{Editor and Corrector}
 \end{flushright}
 
-% =============================================================================
-% BIBLIOGRAPHY
 % =============================================================================
 \chapter*{Select Bibliography}
 \addcontentsline{toc}{chapter}{Select Bibliography}
@@ -1326,22 +974,19 @@ may you trade with wisdom and prosper.
   Banking \& Finance} 13, no.~4--5 (1989): 487--513.
 
 \item Takatsuki, Yasuo (\jp{高槻泰郎}). \jp{大坂堂島米市場：江戸幕府vs市場経済}
-  (\textit{\=Osaka D\=ojima Kome Shij\=o: Edo Bakufu vs.\ Shij\=o Keizai}
-  [The Osaka D\=ojima Rice Market: Edo Shogunate vs.\ Market Economy]).
+  (\textit{\=Osaka D\=ojima Kome Shij\=o: Edo Bakufu vs.\ Shij\=o Keizai}).
   Kodansha Gendai Shinsho 2487. Tokyo: Kodansha, 2018.
 
 \item West, Mark D. ``Private Ordering at the World's First Futures
   Exchange.'' \textit{Michigan Law Review} 98, no.~8 (2000): 2574--2615.
 
 \item Zhou Dunyi. \textit{Taijitu shuo} (\jp{太極図説}, Explanation of the
-  Diagram of the Supreme Ultimate). Mid-11th century. In Wing-tsit Chan, trans.
-  and comp., \textit{A Source Book in Chinese Philosophy}, 460--465.
+  Diagram of the Supreme Ultimate). Mid-11th century. In Wing-tsit Chan,
+  trans.\ and comp., \textit{A Source Book in Chinese Philosophy}, 460--465.
   Princeton: Princeton University Press, 1963.
 
 \end{description}
 
-% =============================================================================
-% GLOSSARY
 % =============================================================================
 \chapter*{Glossary of Key Terms}
 \addcontentsline{toc}{chapter}{Glossary of Key Terms}
@@ -1350,69 +995,64 @@ may you trade with wisdom and prosper.
 \begin{description}[style=nextline, leftmargin=2em, font=\normalfont\bfseries]
 
 \item[\jp{逢来} (\textit{airai})]
-Adverse conditions. A period of generally falling rice prices, typically
-lasting roughly three years within a twelve-to-thirteen-year cycle.
+Adverse conditions; a period of generally falling prices, typically lasting
+roughly three years within a twelve-to-thirteen-year cycle.
 
 \item[\jp{中星} (\textit{ch\=uboshi})]
-Middle Star. The long-term average rice price level that serves as the
-central reference point for all trading decisions.
+Middle Star; the long-term average price level serving as the central
+reference for all trading decisions.
 
 \item[\jp{帳合米} (\textit{ch\=oaimai})]
-``Book rice.'' Forward contracts or futures on rice traded at the D\=ojima
-exchange, as opposed to physical rice.
+``Book rice''; forward contracts or futures on rice, as opposed to physical
+rice.
 
 \item[\jp{堂島} (\textit{D\=ojima})]
-The D\=ojima Rice Exchange in Osaka, the central marketplace for rice
+The D\=ojima Rice Exchange in Osaka; the central marketplace for rice
 futures trading during the Edo period.
 
 \item[\jp{人気} (\textit{jinki})]
-``People-qi.'' Market sentiment; the collective mood of traders.
+``People-qi''; market sentiment; the collective mood of traders.
 
 \item[\jp{順来} (\textit{junrai})]
-Favorable conditions. A period of generally rising rice prices, typically
+Favorable conditions; a period of generally rising prices, typically
 lasting roughly ten years.
 
 \item[\jp{古米} (\textit{komai})]
-Old rice. Rice from previous harvests, traded as a distinct commodity.
+Old rice; rice from previous harvests.
 
 \item[\jp{両} (\textit{ry\=o})]
-The gold coin unit of the Edo period; the standard unit of capital and
-accounting.
+The gold coin unit of the Edo period; the standard unit of capital.
 
 \item[\jp{新米} (\textit{shinmai})]
-New rice. Freshly harvested rice.
+New rice; freshly harvested rice.
+
+\item[\jp{底} (\textit{soko})]
+Bottom or floor; the lowest point of the price range.
 
 \item[\jp{太極} (\textit{taikyoku})]
-Supreme Ultimate. The Neo-Confucian concept of the undifferentiated unity
-from which Yin and Yang emerge; here used to represent market equilibrium.
+Supreme Ultimate; the Neo-Confucian concept representing undifferentiated
+unity, here used for market equilibrium.
 
 \item[\jp{大勢} (\textit{taisei})]
 The grand trend; the overarching market direction.
 
 \item[\jp{俵} (\textit{tawara} / \textit{hy\=o})]
-A bale of rice; the standard unit of measure for rice trading. Also used
-as a unit of price quotation.
+A bale of rice; the standard unit of measure and price quotation.
 
 \item[\jp{天井} (\textit{tenj\=o})]
-Ceiling. The top of the price range; the point beyond which prices are
-unlikely to rise further.
+Ceiling; the top of the price range.
 
 \item[\jp{強気} (\textit{tsuyoki})]
 Strong qi; bullish sentiment or upward momentum.
 
 \item[\jp{運気} (\textit{unki})]
-Fortune-qi. The prevailing momentum or fortune of a given period, combining
-seasonal, cyclical, and weather-related factors.
+Fortune-qi; the prevailing momentum of a given period.
 
 \item[\jp{弱気} (\textit{yowaki})]
 Weak qi; bearish sentiment or downward momentum.
 
-\item[\jp{底} (\textit{soko})]
-Bottom or floor. The lowest point of the price range.
-
 \item[\jp{随金} (\textit{zuikin})]
-``Following gold.'' The principle of tracking actual capital flows rather
-than market opinion.
+``Following gold''; tracking actual capital flows rather than opinion.
 
 \end{description}
 
