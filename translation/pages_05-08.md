@@ -36,10 +36,12 @@ In a great flood year (*ōmizu*), the rice market [reacts] to the twelfth month.
 
 In a year of adverse conditions (*airai*), from around the fifth month onward, summer rice drops and autumn months see further decline. Autumn months are for buying; favorable months are for the pattern of waiting.
 
-**On the upper, middle, and lower rice-producing regions:**
-- **Upper regions** (*jōsaku*): yields are such that one estimates accordingly
-- **Middle regions** (*chūsaku*): the yield falls between upper and lower estimates
-- **Lower regions** (*gesaku*): poor harvest, prices rise accordingly
+**On the grades of harvest quality:**
+- **Good harvest** (*jōsaku* 上作): rice is abundant; prices are depressed accordingly
+- **Average harvest** (*chūsaku* 中作): yields fall between good and poor estimates
+- **Poor harvest** (*gesaku* 下作): rice is scarce; prices rise accordingly
+
+*[Note: 上作/中作/下作 refer to harvest quality grades, not geographic regions.]*
 
 For the months from the tenth onward, one should consider the first ten days of each month; the rice market's movement, whether up or down, can be read. The strong and the weak patterns alternate. The key is to examine the movement within each four-to-five month period.
 
