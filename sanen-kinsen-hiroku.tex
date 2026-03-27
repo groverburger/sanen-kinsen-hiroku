@@ -60,12 +60,16 @@
 \titlespacing*{\chapter}{0pt}{-20pt}{20pt}
 
 \titleformat{\section}
-  {\normalfont\large\bfseries\color{sectioncolor}}
+  {\needspace{4\baselineskip}\normalfont\large\bfseries\color{sectioncolor}}
   {\thesection}{1em}{}
 
 \titleformat{\subsection}
-  {\normalfont\normalsize\bfseries\itshape\color{sectioncolor}}
+  {\needspace{3\baselineskip}\normalfont\normalsize\bfseries\itshape\color{sectioncolor}}
   {\thesubsection}{1em}{}
+
+% Prevent headings and first lines from being stranded at page bottom
+\widowpenalties 3 10000 10000 150
+\clubpenalties 3 10000 10000 150
 
 \pagestyle{fancy}
 \fancyhf{}
