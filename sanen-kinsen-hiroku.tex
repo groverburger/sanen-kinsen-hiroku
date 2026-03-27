@@ -32,7 +32,7 @@
 ]
 \setsansfont{Noto Sans}
 \newfontfamily\japanesefont{Noto Serif JP}[
-  BoldFont={Noto Sans JP},
+  AutoFakeBold=2.5,
 ]
 \newcommand{\jp}[1]{{\japanesefont #1}}
 
@@ -50,6 +50,7 @@
 \usepackage{lettrine}
 \usepackage{parskip}
 \usepackage{needspace}
+\usepackage{mdframed}
 
 \definecolor{chaptercolor}{HTML}{8B0000}
 \definecolor{sectioncolor}{HTML}{333333}
@@ -85,6 +86,26 @@
 
 % Japanese term with romanization gloss
 \newcommand{\jt}[2]{\jp{#1} (\textit{#2})}
+
+% Editorial note: left bar, light background, smaller text
+\definecolor{editorbg}{HTML}{F5F2EB}
+\definecolor{editorbar}{HTML}{BBBBBB}
+\newmdenv[
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  linewidth=2pt,
+  linecolor=editorbar,
+  backgroundcolor=editorbg,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  skipabove=8pt,
+  skipbelow=8pt,
+]{editorbox}
+\newenvironment{editorialnote}{%
+  \begin{editorbox}\small\textit{Editor's note:}\enspace}{\end{editorbox}}
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
@@ -165,7 +186,13 @@ Reuse policy: \url{https://rmda.kulib.kyoto-u.ac.jp/reuse}\\[1em]
 
 \noindent\textbf{Attribution}\\[0.3em]
 \noindent All manuscript images courtesy of the Main Library, Kyoto University.\\
-\jp{所蔵：京都大学附属図書館}
+\jp{所蔵：京都大学附属図書館}\\[1em]
+
+\noindent\textbf{Open Source}\\[0.3em]
+\noindent The complete methodology---including manuscript scans,
+character-by-character transcription, working translation files, and
+\LaTeX{} source---is available at
+\url{https://github.com/groverburger/sanen-kinsen-hiroku}.
 \end{small}
 \newpage
 
@@ -202,8 +229,8 @@ word-for-word fidelity. Uncertain readings are noted throughout.\\[1em]
 manuscript. The chapter and section headings are editorial, added for
 navigation. Footnotes marked ``\textit{Translator's note}'' provide
 historical context, definitions, and comparative observations. Rare
-bracketed passages [like this] indicate brief editorial bridges where the
-manuscript's structure requires explanation. Chapter lengths vary because
+indented passages marked ``\textit{Editor's note}'' provide brief
+editorial bridges where the manuscript's structure requires explanation. Chapter lengths vary because
 the translation follows the manuscript's own proportions---some topics
 receive extensive treatment in the source, others only a line or two.
 Everything else is Ushida's words.\\[0.5em]
@@ -214,15 +241,7 @@ sixty-year weather cycle. Chapters 5--8 build the decision
 framework: market forces, the four virtues, the Middle Star
 mean-reversion system, and the Seven Fortunes. Chapter~9 synthesizes
 everything in the Grand Diagram. Chapters 10--11 close with
-sentiment-reading and final teachings.\\[1em]
-
-\noindent\textbf{Open Source}\\[0.3em]
-\noindent The complete methodology behind this translation---including
-scans of the original manuscript, character-by-character transcription
-with confidence levels, working translation files, and the \LaTeX{}
-source---is available as an open-source repository at
-\url{https://github.com/groverburger/sanen-kinsen-hiroku}. Every
-editorial decision is traceable and auditable.
+sentiment-reading and final teachings.
 \end{small}
 \newpage
 
@@ -388,12 +407,14 @@ family tradition of Ushida Gonzabur\=o.
 
 \vspace{0.5em}
 
-[Two units recur throughout the text that follows.
+\begin{editorialnote}
+Two units recur throughout the text that follows.
 \jt{両}{ry\=o}: the standard gold coin of the Edo period, used here as
 the unit of trading capital. \jt{俵}{tawara}: a bale of rice, the
 standard unit of measure for rice trading and price quotation. Gold and
 rice---ry\=o and tawara---are the two axes of every calculation in this
-text.]
+text.
+\end{editorialnote}
 
 The market moves in great cycles of favorable conditions
 (\jt{順来}{junrai}) and adverse conditions (\jt{逢来}{airai}). Within a
@@ -494,9 +515,11 @@ regarding the market, the strong and weak sentiments must be weighed. One
 should consider whether the rice has reached a level where the movement
 must reverse.
 
-[Several further \jp{禁判} markers are present in the manuscript but the
+\begin{editorialnote}
+Several further \jp{禁判} markers are present in the manuscript but the
 surrounding cursive text is too damaged or faded to translate with
-confidence.]
+confidence.
+\end{editorialnote}
 
 \section{The Thirty-Eight Provisions for Seasonal Trading}
 
@@ -656,7 +679,8 @@ harvests. Two hundred and thirty years of records were consulted, tracking
 patterns of weather and their correlation with the sexagenary cycle
 (\jt{干支}{kanshi}).
 
-[The years in this chapter are named using the sexagenary cycle, which
+\begin{editorialnote}
+The years in this chapter are named using the sexagenary cycle, which
 pairs one of ten Heavenly Stems
 (\jp{甲乙丙丁戊己庚辛壬癸}) with one of twelve Earthly Branches
 (\jp{子丑寅卯辰巳午未申酉戌亥}). The
@@ -664,7 +688,8 @@ combinations produce a sixty-year cycle before repeating. Each year has
 a unique two-character name: \jp{甲子} (\textit{kinoe-ne}) is year~1,
 \jp{乙丑} (\textit{kinoto-ushi}) is year~2, and so on through all
 sixty. As a rough guide to Western dates: \jp{甲子} corresponds to
-1744, 1804, and 1864; each designation recurs every sixty years.]
+1744, 1804, and 1864; each designation recurs every sixty years.
+\end{editorialnote}
 
 \section{Violent Storms}
 
@@ -686,8 +711,10 @@ disruption.
 \section{Frost and Cold}
 
 Unusual cold damages crops and triggers three-year adverse periods. Rice
-prices rise sharply. [The manuscript devotes only a single line to this
-topic.]
+prices rise sharply.
+\begin{editorialnote}
+The manuscript devotes only a single line to this topic.
+\end{editorialnote}
 
 \section{Bountiful Harvest Years}
 
@@ -885,8 +912,10 @@ sets in. Those who recognize this early transition profit the most.
 
 The courage to act when the signs align, even when the crowd moves in the
 opposite direction. Courage without wisdom is recklessness; wisdom without
-courage is paralysis. [The manuscript devotes only these lines to this
-virtue.]
+courage is paralysis.
+\begin{editorialnote}
+The manuscript devotes only these lines to this virtue.
+\end{editorialnote}
 
 \section{Discipline (\jp{節}, \textit{Setsu})}
 
@@ -1536,16 +1565,17 @@ the signs align.
 \addcontentsline{toc}{chapter}{About the Editor}
 \markboth{About the Editor}{}
 
-Zach Booth is a software engineer at NASA Ames Research Center.
-Self-taught in Japanese since the age of eighteen and conversational in
-the language, he identified this manuscript in the Kyoto University
-Rare Materials Digital Archive and recognized that no accurate English
-translation existed.
+Zach Booth is a software engineer at NASA Ames Research Center, where
+he uses AI systems---including Claude (Anthropic)---in his daily
+engineering workflow. Self-taught in Japanese since the age of eighteen
+and conversational in the language, he identified this manuscript in
+the Kyoto University Rare Materials Digital Archive and recognized that
+no accurate English translation existed.
 
-He directed the translation using AI assistance (Claude, Anthropic),
-separating transcription from translation, grading each iteration with
-an independent reviewer, and publishing the complete audit trail so
-that every editorial decision can be checked.
+He directed the translation using the same AI tools he works with
+professionally, separating transcription from translation, grading each
+iteration with an independent reviewer, and publishing the complete
+audit trail so that every editorial decision can be checked.
 
 This is his first published translation. The complete source
 materials---original manuscript scans, character-by-character
