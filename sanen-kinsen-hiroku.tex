@@ -43,7 +43,7 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{microtype}
-\emergencystretch=1.5em  % Allow slightly looser line breaks to prevent overflow
+\emergencystretch=1em  % Allow slightly looser line breaks to prevent overflow
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{setspace}
@@ -218,11 +218,14 @@ K\=omond\=o (\jp{好問堂}) edition, published at Igarashi-tsu
 (\jp{五十嵐津}). The text references the Tenmei era (1781--1789)
 extensively for its price data.}
 
-The title alludes to the proverb of the three monkeys---``see no evil, hear
-no evil, speak no evil'' (\jp{見ざる、聞かざる、言わざる})---reinterpreted
+\begin{sloppypar}
+The title alludes to the proverb of the three
+monkeys---``see no evil, hear no evil, speak no evil''
+(\jp{見ざる、聞かざる、言わざる})---reinterpreted
 as a warning to the trader: do not be swayed by what you \textit{see} others
 doing, what you \textit{hear} as rumor, or what you \textit{say} in haste.
 Instead, observe the deeper patterns.
+\end{sloppypar}
 
 \section*{Authorship and the Edo Rice Market}
 
@@ -346,10 +349,11 @@ profitable trading arts spanning thirty generations---through the
 miraculous art of accumulating wealth with a capital of fifteen thousand
 ry\=o across ten degrees of trading, are secretly stored.
 
+\enlargethispage{2\baselineskip}%
 This is the family tradition of Ushida Gonzabur\=o.
 
 % =============================================================================
-\chapter{Favorable and Adverse Conditions; The Articles of Trading}
+\chapter{Favorable and Adverse Conditions;\\ The Articles of Trading}
 
 \section{Favorable and Adverse Conditions}
 
@@ -577,11 +581,16 @@ at each step.
 
 \section{The Turnover Method}
 
-[The manuscript includes a second tree diagram (\jp{転愛商内之圖},
-\textit{Diagram of Revolving Trading}) showing how a 1,000-ry\=o buying
-position scales through four stages (\jp{壱}--\jp{四}) to a 2,000-ry\=o
-selling position. The diagram mirrors the structure of Figure~3.1 but
-applied to the sell side.]
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\textwidth]{diagrams/fig2_tree_scaling.png}
+\caption{The turnover diagram (\jp{転愛商内之圖}, \textit{Diagram of
+Revolving Trading}). A 1,000-ry\=o buying position (\jp{千両買}, bottom)
+scales through four stages (\jp{壱}--\jp{四}) to a 2,000-ry\=o selling
+position (\jp{二千両売}, top). \textit{Image: Kyoto University Main
+Library.}}
+\label{fig:tree2}
+\end{figure}
 
 When buying positions reach their target, begin to build selling positions
 simultaneously---this is the turnover method (\jt{転換の法}{tenkan no
@@ -763,21 +772,20 @@ observations, he may be right even against one thousand.
 
 \section{Benevolence (\jp{仁}, \textit{Jin})}
 
-\tn{The source text names four virtues: Benevolence (\jp{仁}), Wisdom
-(\jp{智}), Courage (\jp{勇}), and Discipline (\jp{節}). The traditional
-Confucian system names five constant virtues (\jp{五常}), the fifth being
-Trustworthiness (\jp{信}, \textit{shin}). Whether the fifth was omitted
-deliberately, lost in transmission, or treated elsewhere in the tradition
-is unknown from this manuscript. --- The manuscript heading for this
-section reads \jp{仁 — 壱首・壱百五拾目}
-(\textit{Jin --- Isshu, hyaku goj\=u me}), which appears to mean
-``Benevolence---First article; the 150th item.'' This reference to 150
-articles (or items) is unexplained in the manuscript and may indicate that
-this text is drawn from, or claims to summarize, a larger collection of
-trading rules. The relationship to the ``Fifteen Articles'' earlier in the
-text is unclear---the numbers 15 and 150 may or may not be connected.}
-
-Buy once, and it returns to its original level. Wait.
+Buy once, and it returns to its original level.
+Wait.\tn{The source text names four virtues: Benevolence (\jp{仁}),
+Wisdom (\jp{智}), Courage (\jp{勇}), and Discipline (\jp{節}). The
+traditional Confucian system names five constant virtues (\jp{五常}), the
+fifth being Trustworthiness (\jp{信}, \textit{shin}). Whether the fifth
+was omitted deliberately, lost in transmission, or treated elsewhere in
+the tradition is unknown from this manuscript. --- The manuscript heading
+for this section reads \jp{仁 — 壱首・壱百五拾目} (\textit{Jin --- Isshu,
+hyaku goj\=u me}), which appears to mean ``Benevolence---First article;
+the 150th item.'' This reference to 150 articles (or items) is
+unexplained in the manuscript and may indicate that this text is drawn
+from, or claims to summarize, a larger collection of trading rules. The
+relationship to the ``Fifteen Articles'' earlier in the text is
+unclear---the numbers 15 and 150 may or may not be connected.}
 
 When one buys and the price immediately returns to the purchase level, do
 not panic and sell at cost. The market is testing the trader's resolve. This
@@ -1485,11 +1493,10 @@ Weak qi; bearish sentiment or downward momentum.
 \addcontentsline{toc}{chapter}{About the Editor}
 \markboth{About the Editor}{}
 
-Zach Booth is the lead software engineer on the SHERPA project at NASA
-Ames Research Center, where he works on mission planning for the VIPER
-Lunar Rover using Markov Decision Processes (MDPs) and Partially
-Observable MDPs (POMDPs). He studies and works with AI systems---including
-Claude (Anthropic)---in his daily engineering workflow.
+Zach Booth is a software engineer at NASA Ames Research Center, where he
+works on mission planning for the VIPER Lunar Rover. He studies and
+works with AI systems---including Claude (Anthropic)---in his daily
+engineering workflow.
 
 Self-taught in Japanese since the age of eighteen and conversational in
 the language, Booth identified this manuscript in the Kyoto University
