@@ -3,6 +3,7 @@
 *.log
 *.out
 *.toc
+*.lof
 *.synctex.gz
 
 # Generated PDF (rebuild from .tex)
