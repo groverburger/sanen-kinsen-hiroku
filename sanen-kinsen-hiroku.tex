@@ -31,7 +31,9 @@
   BoldItalicFont={Noto Serif Bold Italic},
 ]
 \setsansfont{Noto Sans}
-\newfontfamily\japanesefont{Noto Serif JP}
+\newfontfamily\japanesefont{Noto Serif JP}[
+  BoldFont={Noto Sans JP},
+]
 \newcommand{\jp}[1]{{\japanesefont #1}}
 
 \usepackage{graphicx}
@@ -41,6 +43,7 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{microtype}
+\emergencystretch=1.5em  % Allow slightly looser line breaks to prevent overflow
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{setspace}
@@ -71,7 +74,7 @@
 \fancyfoot[CE,CO]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\renewcommand{\footnotesize}{\small}
+% Footnotes use default \footnotesize (8pt at 10pt base)
 
 % Translator's note footnote
 \newcommand{\tn}[1]{\footnote{\textit{Translator's note:} #1}}
@@ -88,6 +91,10 @@
   pdftitle={Sanen Kinsen Hiroku: Three Monkeys Gold Spring Secret Record},
   pdfauthor={Edited by Zach Booth; translated with AI assistance (Claude Opus 4.6, Anthropic)},
 }
+
+% Suppress hyperref warnings for CJK in PDF bookmarks
+\pdfstringdefDisableCommands{\def\jp#1{}}
+\pdfstringdefDisableCommands{\def\jt#1#2{#2}}
 
 % =============================================================================
 \begin{document}
@@ -178,8 +185,18 @@ manuscript. The chapter and section headings are editorial, added for
 navigation. Footnotes marked ``\textit{Translator's note}'' provide
 historical context, definitions, and comparative observations. Rare
 bracketed passages [like this] indicate brief editorial bridges where the
-manuscript's structure requires explanation. Everything else is
-Ushida's words.
+manuscript's structure requires explanation. Chapter lengths vary because
+the translation follows the manuscript's own proportions---some topics
+receive extensive treatment in the source, others only a line or two.
+Everything else is Ushida's words.\\[1em]
+
+\noindent\textbf{Open Source}\\[0.3em]
+\noindent The complete methodology behind this translation---including
+scans of the original manuscript, character-by-character transcription
+with confidence levels, working translation files, and the \LaTeX{}
+source---is available as an open-source repository at
+\url{https://github.com/groverburger/sanen-kinsen-hiroku}. Every
+editorial decision is traceable and auditable.
 \end{small}
 \newpage
 
@@ -1341,6 +1358,10 @@ word-for-word in places.}
 
 \begin{description}[style=nextline, leftmargin=0em, font=\normalfont]
 
+\item CiNii Books. \jp{校正三猿金泉秘録} (\textit{K\=osei Sanen Kinsen
+  Hiroku}). Bibliographic record. National Institute of Informatics,
+  Japan. \url{https://ci.nii.ac.jp/}
+
 \item Hirschmeier, Johannes, and Tsunehiko Yui. \textit{The Development of
   Japanese Business, 1600--1980}. 2nd ed. London: George Allen \& Unwin,
   1981.
@@ -1348,6 +1369,15 @@ word-for-word in places.}
 \item Moss, David A., and Eugene Kintgen. ``The Dojima Rice Market and
   the Origins of Futures Trading.'' Harvard Business School Case 709-044.
   Boston: Harvard Business School Publishing, 2009. Revised 2010.
+
+\item Kyoto University Rare Materials Digital Archive. \jp{校正三猿金泉秘録}
+  (\textit{K\=osei Sanen Kinsen Hiroku}). Record ID: RB00012360.
+  Tanimura Collection, Main Library.
+  \url{https://rmda.kulib.kyoto-u.ac.jp/item/rb00012360}
+
+\item National Diet Library, Japan. \jp{校正三猿金泉秘録}. Catalog record.
+  Author: \jp{牛田権三郎} (Ushida Gonzabur\=o).
+  \url{https://ndlsearch.ndl.go.jp/}
 
 \item Nison, Steve. \textit{Beyond Candlesticks: New Japanese Charting
   Techniques Revealed}. New York: John Wiley \& Sons, 1994.
@@ -1449,5 +1479,29 @@ Weak qi; bearish sentiment or downward momentum.
 {\small\itshape End of the Complete Volume}\\[0.3em]
 {\small \jp{全} --- \textit{Zen}}
 \end{center}
+
+% =============================================================================
+\chapter*{About the Editor}
+\addcontentsline{toc}{chapter}{About the Editor}
+\markboth{About the Editor}{}
+
+Zach Booth is the lead software engineer on the SHERPA project at NASA
+Ames Research Center, where he works on mission planning for the VIPER
+Lunar Rover using Markov Decision Processes (MDPs) and Partially
+Observable MDPs (POMDPs). He studies and works with AI systems---including
+Claude (Anthropic)---in his daily engineering workflow.
+
+Self-taught in Japanese since the age of eighteen and conversational in
+the language, Booth identified this manuscript in the Kyoto University
+Rare Materials Digital Archive and recognized that no accurate English
+translation existed. He directed the translation process using AI
+assistance, applying the same methodology of systematic verification and
+traceable decision-making that characterizes his engineering work.
+
+This is his first published translation. The complete source
+materials---original manuscript scans, character-by-character
+transcription with confidence levels, working translation files, and
+\LaTeX{} source---are available at:\\
+\url{https://github.com/groverburger/sanen-kinsen-hiroku}
 
 \end{document}
