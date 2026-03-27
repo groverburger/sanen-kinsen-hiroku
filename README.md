@@ -45,6 +45,50 @@ This external reviewer has no knowledge of our process, goals, or prior conversa
 
 This cycle was repeated multiple times, catching fabricated content, arithmetic errors, misattributions, bibliography inaccuracies, layout problems, and omitted source material that the production instance had missed. The technique proved remarkably effective at surfacing blind spots.
 
+<details>
+<summary>Example grader output (click to expand)</summary>
+
+```
+Grade: A-
+
+Category Grades:
+
+| Category                       | Grade |
+|--------------------------------|-------|
+| Scholarly rigor & attribution  | A+    |
+| Translation quality & voice    | A     |
+| Editorial transparency         | A     |
+| Typography & design            | A-    |
+| Front/back matter completeness | A-    |
+| Internal structure & pacing    | B     |
+| Calculation tables clarity     | C+    |
+| Overall                        | A-    |
+
+Strengths:
+1. The attribution argument is the document's standout contribution.
+   The Translator's Introduction makes a careful, well-sourced case
+   that English-language sources have systematically misattributed
+   this text to Honma Munehisa...
+
+2. Transparency of method is exemplary. The document is consistently
+   honest about what it is and isn't...
+
+Weaknesses:
+1. Chapter 7 calculation tables are the weakest section (C+).
+   Sections 7.3.2 through 7.3.6 are repetitive and hard to follow...
+
+2. Excessive white space / short chapters (B-). Multiple chapters
+   end with over half a page blank...
+
+Summary: The document is publishable as-is. The weaknesses are real
+but none are disqualifying — they're the kind of refinements that
+separate a strong first edition from a polished second edition.
+```
+
+This feedback led directly to restructuring Chapter 7.3 (summary table + appendix), fixing orphaned headings, and multiple rounds of content restoration.
+
+</details>
+
 ### What Claude Opus 4.6 Does Well
 
 - **Reading kuzushiji**: Claude Opus 4.6 can read Edo-period cursive Japanese script directly from manuscript images with reasonable accuracy, identifying kanji, kana, and structural elements (section markers, diagram labels, numerical tables).
@@ -108,4 +152,10 @@ All manuscript images courtesy of the Main Library, Kyoto University.
 
 ## License
 
-The source manuscript images are provided under Kyoto University's free-with-attribution license. See [reuse policy](https://rmda.kulib.kyoto-u.ac.jp/reuse).
+Copyright (c) 2026 Zach Booth. All rights reserved.
+
+**Translation, transcription, and LaTeX source** (this repository): Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). You may read, study, fork, and build on this work for non-commercial purposes, provided you credit the original and share derivatives under the same terms.
+
+**The compiled book** (PDF / printed editions): All rights reserved. Commercial distribution of the finished book is exclusively authorized by the copyright holder.
+
+**Source manuscript images**: Provided under Kyoto University's free-with-attribution license (二次利用自由・所蔵表示). See [reuse policy](https://rmda.kulib.kyoto-u.ac.jp/reuse). All manuscript images courtesy of the Main Library, Kyoto University (所蔵：京都大学附属図書館).
