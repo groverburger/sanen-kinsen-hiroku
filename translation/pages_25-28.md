@@ -12,7 +12,7 @@
 
 ### ◯ 七福即宝秘密 — *Seven Fortunes, Instant Treasure — The Secret*
 
-This section reveals the core secret: the "seven fortunes" are seven conditions that, when all present simultaneously, indicate a high-probability trade. The trader must observe:
+This section reveals the core secret: the "seven fortunes" are seven conditions that, when all present simultaneously, indicate a high-probability trade. (Note: the manuscript presents these as continuous prose; the numbered list below is editorially structured for clarity.) The trader must observe:
 
 1. The seasonal cycle is favorable
 2. The price is at or below the middle star

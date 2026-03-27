@@ -12,7 +12,7 @@ The number of rice-producing domains and their yields are tallied:
 
 Rice combined from all regions:
 - Total: 28,548 *chō* (districts) producing rice
-- Autumn harvest estimate for all domains tallied
+- Autumn harvest estimate for all domains tallied: 9,484,815 *tawara*
 
 ### 世の中 三段之圖 — *Diagram of the Three Levels of the World*
 
@@ -36,7 +36,7 @@ A circular diagram divided into three bands:
 - **下 (*Shita/Ge*) — Lower:** 25 tawara — the floor range
 
 Additional markings:
-- **天井** (*Tenjō*) — Ceiling: the absolute top, at 35 tawara level
+- **天井** (*Tenjō*) — Ceiling: the highest price point, at the 25 tawara supply level (scarce supply = high price)
 - **底直** (*Soko-ne*) — Floor price: at 35 tawara on the low side (i.e., when supply is 35 tawara per unit, price is low)
 - **中星** (*Chūboshi*) — Middle Star: the central equilibrium point at approximately 30 tawara
 

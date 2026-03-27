@@ -18,7 +18,7 @@ Library catalog markings and color calibration chart visible alongside the aged 
 - 全 — "Complete"
 
 **Left side (ownership inscription, in large cursive):**
-- 鳴田君寄贈 — "Donated by Mr. Naruta [Shimada]"
+- 鳴田君寄贈 — "Donated by Mr. Naruta"
 
 **Bottom-right label:**
 - 三猿軍書選 — "Selection from the Three Monkeys Military/Strategy Books"

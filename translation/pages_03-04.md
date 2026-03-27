@@ -10,21 +10,21 @@
 鳴川猛之助校正
 *Revised and corrected by Narukawa Takenosuke*
 
-淡蔽知新活法窮理
-*Investigating principles through the new living method of learning from the old and knowing the new*
+温故知新活法窮理
+*Investigating principles through the living method of studying the old to know the new*
 
 校正三猿金泉秘録
 *Revised Three Monkeys Gold Spring Secret Record*
 
-天問秋見積之圖 補附
-*Supplemented with diagrams of autumn forecasting by heavenly inquiry*
+天問秋作見積之圖 補附
+*Supplemented with diagrams of autumn harvest estimation by heavenly inquiry*
 
 好問堂蔵版
 *Published by Kōmondō*
 
 五十嵐津 — *Igarashi-tsu [port]*
 
-辛亥年五月 — *Fifth month of the Xinhai year*
+辛亥年五月 — *Fifth month of the kanoto-i year (1851)*
 
 ---
 

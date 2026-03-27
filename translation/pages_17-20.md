@@ -61,7 +61,7 @@ The text discusses the relationship between different regional markets (*Dōjima
 
 ## Page 19 — Benevolence (*Jin*): The First Virtue of Trading
 
-### ◯ 仁 — *Benevolence (Jin)* — First Article; Summary of 150 Articles
+### ◯ 仁 — *Benevolence (Jin)* — 壱首 · 壱百五拾目 (First Article; the 150th Item)
 
 **壱買段せ、其まゝ本へもどる** — *"Buy once, and it returns to its original level."*
 

@@ -32,6 +32,8 @@ The text references the relationship between physical geography, weather pattern
 
 ## Page 32 — Afterword: The Essence of the Teaching
 
+(Note: The manuscript's closing section is in dense continuous cursive that is difficult to transcribe character by character. The English below captures the substance of the closing, but some phrasing may be a close paraphrase rather than a strict word-for-word translation. The attribution to 鳴川猛之助 and the date are clearly legible.)
+
 ### Closing Reflections
 
 In all the world's markets, the rice market is the foundation. What has been written in this record is the accumulated observation of generations—the secret teachings of the house, refined and corrected.

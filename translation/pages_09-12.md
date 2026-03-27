@@ -2,7 +2,7 @@
 
 ## Page 9 — The Fifteen Articles of Trading; Market Sentiment
 
-### ◯ 十五ヶ条 — *Fifteen Articles*
+### ◯ 十五ヶ条 禁物場 — *Fifteen Articles: Forbidden Things of the Marketplace*
 
 Among the provisions for trading, those who deal in large quantities and those with small capital must both observe the following. Within the market, one must read the sentiment of the crowd—whether people are inclined to buy or sell—and not act rashly.
 
@@ -72,10 +72,10 @@ A branching tree diagram shows:
         /          \
       ②            ①
      /    \
-   ④      ③    100 Ryō Buy (initial)
+   ④      ③    千十両買 (1,000+ Ryō Buy)
 ```
 
-Starting from a base purchase of 100 ryō (node ①), one builds to 500 ryō through staged additions. At each node, capital is added based on market confirmation.
+The tree connects a 五百両買 (500 Ryō Buy) position to a 千十両買 (approximately 1,000 Ryō Buy) position through four stages. The relationship between the two amounts — whether the larger figure represents the starting capital or the accumulated result — is not immediately clear from the diagram alone. At each node, capital is added or positions adjusted based on market confirmation.
 
 ### Diagram: 百両売 — *100 Ryō Sell (right side)*
 

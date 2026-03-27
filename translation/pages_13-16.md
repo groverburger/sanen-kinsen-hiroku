@@ -50,7 +50,7 @@ In these years, rice markets experience extreme volatility; prices may surge two
 - These bring three-year periods of disruption
 
 ### ◯ 零冷 — *Frost and Cold*
-- 己巳, 己亥, 己来
+- 己巳, 己亥, 己未
 - Unusual cold damages crops; three-year adverse periods follow
 - Rice prices rise sharply in response
 
