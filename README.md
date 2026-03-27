@@ -103,6 +103,38 @@ This feedback led directly to restructuring Chapter 7.3 (summary table + appendi
 - **Attribution research**: The misattribution story required independent research into Nison's books, Japanese library catalogs, and the Honma/Ushida distinction.
 - **Source identification**: Finding the manuscript in Kyoto University's digital archive and recognizing its significance.
 
+### Confidence Assessment
+
+**Headings, labels, and key terms (high confidence).** Section markers (三十八ヶ条, 十五ヶ条), diagram labels (天明古米, 中星, 天井, 底直), and recurring trading terms (順来, 逢来, 強気, 弱気, 禁判) are written larger and more carefully in the manuscript and can be read reliably.
+
+**Overall structure and teachings (high confidence).** The text is internally self-consistent in ways that would be very unlikely if the translation were substantially wrong. The preface introduces yin-yang cosmology; the trading rules operationalize it; the Middle Star system quantifies it; the Grand Diagram synthesizes it; the Four Virtues provide the discipline to execute it. Each piece refers back to the others. Key terms (中星, 強気/弱気) appear consistently across multiple contexts with the same meaning. If the characters were being badly misread, this coherence would break down.
+
+**Flowing cursive prose (moderate confidence).** The body text in dense passages — the calculation tables, the 38 provisions, the afterword — is read with less certainty. Many individual characters are identified by context and plausibility rather than confident visual recognition. The transcription files record confidence levels (HIGH/MEDIUM/LOW) for this reason.
+
+**Specific numerical figures (moderate-low confidence).** The calculation tables contain figures that are difficult to read in the cursive script, and the manuscript's accounting method connecting the figures across stages is not fully transparent.
+
+### Research Context: Why This Is Novel
+
+As of early 2026, this project represents a genuinely novel workflow in the field of AI-assisted classical Japanese translation. Here's why:
+
+**No published end-to-end pipeline exists for this task.** The academic literature on AI translation of classical Japanese focuses on either (a) OCR/kuzushiji recognition (CODH's KuroNet/Miwo) or (b) LLM translation of already-transcribed classical text (the CODH Tsukushi Project, the MITRA Buddhist text project). Nobody has published an end-to-end pipeline that goes directly from Edo-period cursive manuscript images to a publication-ready English translation with a full audit trail.
+
+**The current generation of models is untested on classical Japanese.** The formal academic benchmarks that exist (the Genji ambiguity test, the Kanbun-LM evaluation, the PoetMT benchmark) all tested models from 2023-2024 — GPT-4 era. Claude Opus 4.6, GPT-5.x, and Gemini 3.x have not been rigorously evaluated on classical Japanese. The CODH Tsukushi Project rated Claude Sonnet 4.5 highest among all tested models for classical Japanese text interaction, but did not test Opus 4.6. Our project is, as far as we can determine, one of the first to apply Opus 4.6's multimodal capabilities directly to Edo-period kuzushiji manuscripts.
+
+**Claude Opus 4.6 reads the manuscript images directly.** Most existing workflows use a dedicated OCR tool (KuroNet, Miwo) for character recognition, then feed the recognized text to an LLM for translation. Our workflow skips the OCR step — Claude reads the cursive script directly from the IIIF page images. This is possible because of Opus 4.6's multimodal capabilities, which combine visual character recognition with contextual language understanding in a single pass. The tradeoff is lower character-level accuracy than dedicated OCR tools on clean printed text, but potentially better performance on damaged or ambiguous manuscript pages where context helps.
+
+**The transcription-then-translation separation is methodologically significant.** Our initial approach (Phase 1) had Claude translate directly from images, conflating character recognition and meaning interpretation. When we separated these into explicit stages — transcription with confidence levels, then translation from transcription — the results became more consistent and, critically, auditable. A reader can check the transcription against the original image, then check the translation against the transcription. This separation has been discussed in the literature (e.g., the CODH Tsukushi pipeline) but not, to our knowledge, implemented as an open-source audit trail for a complete book-length translation.
+
+**The adversarial grading loop has no direct precedent in translation work.** Using an independent, context-free LLM instance to grade the output — inspired by GANs — proved remarkably effective at catching failure modes that the production instance couldn't self-detect: fabricated content, arithmetic errors, misattributed sources, and editorial paraphrase presented as translation. This technique is applicable to any AI-assisted translation project and, to our knowledge, has not been formally described in the translation studies literature.
+
+**Key references for the research context:**
+- Clanuwat et al., "Deep Learning for Classical Japanese Literature" (2018) — KuroNet, Kuzushiji-MNIST
+- Kitamoto et al., CODH Tsukushi Project — LLM interaction with classical Japanese texts
+- Wang et al., "Kanbun-LM" (ACL 2023) — Classical Chinese to kanbun parallel dataset
+- Nehrdich, "MITRA: A Parallel Corpus for Buddhist Chinese" (2025) — LLM evaluation for Buddhist texts
+- De Wolf, "Can ChatGPT Translate Literary Japanese?" (2023) — The Genji ambiguity test
+- Miwo app (CODH) — Kuzushiji OCR, 3.4M+ images processed
+
 ## Repository Structure
 
 ```
