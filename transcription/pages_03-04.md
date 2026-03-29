@@ -48,31 +48,41 @@ misreading 淡蔽 appears to be an AI vision error on the cursive.〉
 
 ### 三猿金泉録序
 
-太極動て陽を生じ、静にして陰を生ず。
+太極《たいきょく》動〈okuri: て〉陽《よう》を生〈レ〉じ、静《せい》にして陰《いん》を生ず。
 
-一静一動の理は天地昇降の理なり。
+一静一動の理《り》は天地《てんち》昇降《しょうこう》の理なり。
 
-其動、極に至りて静となり、静、極に至りて又動く。
+其動、極《きょく》に至りて静となり、静、極に至りて又動く。
 
-動静互に其根を為す。
+動静《どうせい》互に其根《こん》を為す。
 
-是れ強氣と弱氣の交る理なり。
+是れ強氣《きょうき》と弱氣《じゃくき》の交《まじ》る理なり。
 
-此の理を万物に施せば、包まずという事なし。
+此の理を万物《ばんぶつ》に施せば、包まずという事なし。
 
-米に施せば、人の氣の強弱、此の理の中に含む。
+米に施せば、人の氣《き》の強弱《きょうじゃく》、此の理の中に含む。
 
 此を合て諸人の理は合すべし。
 
-豊年晴天の時は、種々米を見(?)べし。
+豊年《ほうねん》晴天《せいてん》の時は、種々米を見(?)べし。
 
-天性理外の理あり。
+天性《てんせい》理外《りがい》の理あり。
 
 〈The preface is written in kanbun kundoku style — Chinese-derived prose
-with Japanese reading marks. The classical idiom is clearly legible. The
-phrase 天性理外の理 ("the principle beyond natural disposition") may
-alternatively read 天性の理外の理 depending on how the kundoku marks
-are interpreted.〉
+with Japanese reading marks. The classical idiom is clearly legible.
+
+FURIGANA NOTE: The kanbun text has visible kundoku marks (返り点) and
+marginal okurigana. A レ mark is visible near 生じ on the first line,
+indicating the standard inversion reading 陽を生じ. Furigana are visible
+alongside several kanji: 太極, 陽, 陰, 強氣, 弱氣, 天地, and others
+are glossed with kana readings in the manuscript. Most readings follow
+standard on'yomi for kanbun — the key confirmation is 強氣《きょうき》
+and 弱氣《じゃくき》 (not きょうけ/じゃくけ), establishing these as
+Sino-Japanese readings throughout the text.
+
+The phrase 天性理外の理 ("the principle beyond natural disposition") has
+no visible kundoku marks between 天性 and 理外, supporting the reading
+as a single clause 天性理外の理 rather than 天性の理外の理.〉
 
 ---
 
@@ -86,7 +96,7 @@ are interpreted.〉
 
 又(?)数月(?)上りたる所(?)に、売(?)の力(?)天井(?)に至る。
 
-順来逢来の道(?)、十二三年の内、順来凡(?)十年、逢来三年。
+順来《じゅんらい》逢来《あいらい》の道(?)、十二三年の内、順来凡(?)十年、逢来三年。
 
 高(?)の内(?)年の秘録(?)、家傳(?)商内(?)高安(?)錢(?)三十
 

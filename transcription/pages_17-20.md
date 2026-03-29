@@ -16,9 +16,10 @@ Source image: `page_00017.jpg`
 
 〈Red circle markers (◯◯◯◯) visible — four marked principles〉
 
-### 〈Red circle marker〉八極　三千目
+### 〈Red circle marker〉八極《はっきょく》　三千目《さんぜんめ》
 
-〈"Eight Poles, Three Thousand Points" — section header clearly legible〉
+〈"Eight Poles, Three Thousand Points" — section header clearly legible.
+Furigana visible alongside both terms.〉
 
 の極(?)を丹(?)月(?)の(?)すべての(?)月をくく(?)ると(?)、
 
@@ -30,19 +31,23 @@ Source image: `page_00017.jpg`
 
 ...其(?)事(?)を(?)知(?)り(?)て(?)参(?)候(?)ありて(?)、回(?)知(?)あるべし(?)。
 
-### 〈Red circle marker〉一旅将壱九之勢
+### 〈Red circle marker〉一旅将《いちりょしょう(?)》壱九之勢
 
 〈"The Force of One-Nine / The General's Single Campaign"
-一旅将壱九之勢 — legible in semi-cursive.〉
+一旅将壱九之勢 — legible in semi-cursive. Small kana visible alongside
+一旅将 but partially illegible.〉
 
 ### Left page:
 
-陽　陰　太極　陰合
+陽《よう》　陰《いん》　太極《たいきょく》　陰合《いんごう(?)》
 
 〈Four categories of market force listed vertically:
 陽 (Yang/Bullish), 陰 (Yin/Bearish),
 太極 (Supreme Ultimate/Equilibrium),
-陰合 (Yin convergence) — all clearly legible.〉
+陰合 (Yin convergence) — all clearly legible. Furigana visible
+alongside all four terms. The readings are standard on'yomi,
+confirming these are used as Sino-Japanese philosophical terms
+(not native Japanese kun'yomi).〉
 
 万人(?)すべて(?)一(?)心(?)なると(?)き(?)は(?)、勢(?)を(?)紛(?)ち(?)て(?)、
 
@@ -68,9 +73,10 @@ Source image: `page_00018.jpg`
 
 ### Right page:
 
-### 天怪
+### 天怪《てんかい》
 
-〈"Celestial Anomalies" — header clearly legible in larger characters.〉
+〈"Celestial Anomalies" — header clearly legible in larger characters.
+Furigana てんかい visible.〉
 
 ある(?)もの(?)の(?)月(?)の(?)名(?)の(?)多(?)き(?)をと(?)もの(?)を(?)初(?)め(?)て(?)知る(?)べし(?)
 
@@ -95,10 +101,10 @@ target selling month."〉
 
 〈Red circle marker (◯)〉
 
-### 智　十首
+### 智《ち》　十首
 
 〈"Wisdom — Ten Principles" — clearly legible.
-智 in large characters, 十首 below it.〉
+智 in large characters with furigana ち, 十首 below it.〉
 
 弘(?)秀(?)...三(?)端(?)五(?)日(?)知(?)...
 
@@ -134,10 +140,10 @@ Source image: `page_00019.jpg`
 
 ### Right page:
 
-### 仁 — 壱首 · 壱百五拾目
+### 仁《じん》 — 壱首 · 壱百五拾目
 
 〈"Benevolence — First article; the 150th item"
-仁 in large characters. 壱首 and 壱百五拾目 clearly legible.
+仁 in large characters with furigana じん. 壱首 and 壱百五拾目 clearly legible.
 
 NOTE: The "150th item" (壱百五拾目) is clearly written in the
 manuscript. The tex footnote (line 747) correctly notes this
@@ -167,11 +173,15 @@ genuinely claims this is part of a larger collection.〉
 
 〈Text about upper, middle, and lower positions:〉
 
-### 上位　中位　下位
+### 上位《じょうい》　中位《ちゅうい》　下位《げい》
 
 〈Upper level (上位), Middle level (中位), Lower level (下位)
-— these terms are clearly written, though the surrounding
-prose describing each level is in denser cursive.〉
+— these terms are clearly written, with furigana visible alongside
+each. NOTE: 下位 has furigana that reads げい (not かい), an
+unusual reading — this is significant as the LaTeX file (line 894)
+uses this same non-standard reading, which is now confirmed by the
+manuscript's own furigana. The surrounding prose describing each
+level is in denser cursive.〉
 
 ...三百日(?)以上(?)にして(?)平(?)にあり(?)て(?)、
 
@@ -209,23 +219,28 @@ Source image: `page_00020.jpg`
 
 〈The six observations listed:〉
 
-二割
+二割《にわり》
 
-三割
+三割《さんわり》
 
-高の内
+高の内《たかのうち》
 
-横の平
+横の平《よこのひら》
 
-人の気
+人の気《ひとのき》
 
-大勢
+大勢《たいせい》
 
-〈All six terms clearly legible:
-二割 (20% level), 三割 (30% level),
-高の内 (within the high range), 横の平 (sideways),
-人の気 (people's sentiment), 大勢 (grand trend).
-These match the tex file exactly.〉
+〈All six terms clearly legible with furigana visible alongside each:
+二割《にわり》 (20% level), 三割《さんわり》 (30% level),
+高の内《たかのうち》 (within the high range), 横の平《よこのひら》 (sideways),
+人の気《ひとのき》 (people's sentiment), 大勢《たいせい》 (grand trend).
+These match the tex file exactly.
+
+IMPORTANT: The furigana for 人の気 reads ひとのき — this is distinct
+from 人気《じんき》 used elsewhere in the text. The 人の気 form with の
+emphasizes "the ki/qi of people" as a collective sentiment reading,
+while 人気《じんき》 is used as a compound term for "market sentiment."〉
 
 高の(?)下(?)ありて(?)の(?)足(?)定(?)まる(?)を(?)見(?)て(?)、来(?)を(?)決(?)すべし(?)。
 
@@ -242,9 +257,10 @@ These match the tex file exactly.〉
 〈"Think of mountains — rice is like mountains and water; the great
 mountain does not rise in a day." — the mountain metaphor.〉
 
-### 千人の気
+### 千人の気《せんにんのき》
 
-〈"The Sentiment of a Thousand People" — clearly legible header.〉
+〈"The Sentiment of a Thousand People" — clearly legible header
+with furigana.〉
 
 千人(?)一(?)心(?)なるに(?)一人(?)の(?)考(?)の(?)別(?)なるとき(?)...
 

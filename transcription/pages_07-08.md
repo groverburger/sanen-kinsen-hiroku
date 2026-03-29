@@ -20,10 +20,12 @@ continuation of the Thirty-Eight Provisions section.〉
 
 〈Red circle marker (◯)〉
 
-### 三十八ヶ条商内
+### 三十八ヶ条商内《あきない》
 
 〈"Thirty-Eight Provisions for Trading" — the section header is clearly
-visible with the circle marker. The 三十八 (38) and 商内 are legible.〉
+visible with the circle marker. The 三十八 (38) and 商内 are legible.
+Furigana あきない is visible alongside 商内, confirming the native
+Japanese reading rather than Sino-Japanese しょうない.〉
 
 三(?)ヶ(?)条(?)
 
@@ -39,11 +41,12 @@ visible with the circle marker. The 三十八 (38) and 商内 are legible.〉
 
 下(?)茶(?)の上(?)を(?)ことし(?)より(?)、
 上(?)作(?)の(?)年(?)を(?)とし(?)、後(?)に(?)見(?)くらぶ(?)り(?)、
-上作中作下作(?)の(?)のくち(?)なけ(?)り(?)。
+上作《じょうさく》中作《ちゅうさく》下作《げさく》(?)の(?)のくち(?)なけ(?)り(?)。
 
 〈The text discusses harvest quality grades:
-上作 (jōsaku, good harvest), 中作 (chūsaku, average),
-下作 (gesaku, poor harvest) — clearly legible.〉
+上作《じょうさく》 (good harvest), 中作《ちゅうさく》 (average),
+下作《げさく》 (poor harvest) — clearly legible. Furigana visible
+alongside all three terms in the manuscript.〉
 
 市(?)侍(?)の(?)初(?)十日(?)の(?)頃(?)に(?)、
 或(?)は(?)名(?)を(?)寄(?)る(?)の(?)月(?)にて(?)、
@@ -59,7 +62,7 @@ visible with the circle marker. The 三十八 (38) and 商内 are legible.〉
 
 〈Discussion of the 5th month patterns.〉
 
-強気(?)弱気(?)の(?)直(?)に(?)して(?)、四(?)月(?)も(?)来(?)の(?)
+強気《きょうき(?)》弱気《じゃくき(?)》の(?)直(?)に(?)して(?)、四(?)月(?)も(?)来(?)の(?)
 
 〈Reference to strong/weak qi and 4th month patterns.〉
 
@@ -101,10 +104,11 @@ applied to rice price movements.〉
 fortune-qi (運氣) — this connects to the text's emphasis on
 patient observation.〉
 
-### 穂足(?)の(?)録(?)
+### 穂足《ほたり(?)》の(?)録(?)
 
 〈Section header in boxed label: 穂足の録 —
-"Record of Spike Patterns"〉
+"Record of Spike Patterns." Small kana visible alongside 穂足
+but partially illegible; ほたり is a tentative reading.〉
 
 〈The boxed label is clearly visible in the manuscript.〉
 

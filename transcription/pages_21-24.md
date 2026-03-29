@@ -45,9 +45,10 @@ lending HIGH confidence to the tex's rendering.〉
 
 ### Left page:
 
-### 〈Boxed label:〉世の中　三段之圖
+### 〈Boxed label:〉世の中《よのなか》　三段《さんだん》之圖
 
-〈"Diagram of the Three Levels of the World" — boxed label clearly legible.〉
+〈"Diagram of the Three Levels of the World" — boxed label clearly legible.
+Furigana visible alongside 世の中 and 三段.〉
 
 〈Circular diagram with three bands:〉
 
@@ -69,10 +70,15 @@ is described in the surrounding text.〉
 
 中星　三拾俵(?)
 
-〈The three reference points:
-天井 (Ceiling) — corresponds to LOW supply (25 tawara), HIGH price
-底直 (Floor) — corresponds to HIGH supply (35 tawara), LOW price
-中星 (Middle Star) — equilibrium at ~30 tawara
+〈The three reference points, each with furigana visible in the manuscript:
+天井《てんじょう》 (Ceiling) — corresponds to LOW supply (25 tawara), HIGH price
+底直《そこね》 (Floor) — corresponds to HIGH supply (35 tawara), LOW price
+中星《ちゅうぼし》 (Middle Star) — equilibrium at ~30 tawara
+
+FURIGANA NOTE: 中星 has furigana that reads ちゅうぼし (Sino-Japanese
+ちゅう + native ぼし), confirming this mixed-reading compound. This is
+the intended reading throughout the text. 底直 reads そこね (native
+Japanese), NOT ていちょく (on'yomi).
 
 NOTE: The inverse relationship between supply and price is critical:
 天井 (price ceiling = highest price) maps to 25 tawara (lowest supply).
@@ -119,9 +125,10 @@ buy; when 20% above, sell.〉
 
 ### Left page:
 
-### 〈Red circle marker (◯)〉強氣立の秘傳
+### 〈Red circle marker (◯)〉強氣《きょうき》立の秘傳《ひでん》
 
-〈"Secret Tradition of Bullish Positioning" — clearly legible header.〉
+〈"Secret Tradition of Bullish Positioning" — clearly legible header.
+Furigana visible alongside 強氣 and 秘傳.〉
 
 〈Red circle markers (◯) at multiple levels, indicating staged entries:〉
 
@@ -222,9 +229,10 @@ Source image: `page_00024.jpg`
 
 〈Introductory text about 1,000 ryō trading.〉
 
-### 〈Red circle marker〉顧氣
+### 〈Red circle marker〉顧氣《こき(?)》
 
-〈"Reflecting on Momentum" — clearly legible.〉
+〈"Reflecting on Momentum" — clearly legible. Small kana visible
+but partially uncertain.〉
 
 ### 壱
 

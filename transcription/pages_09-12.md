@@ -18,12 +18,13 @@ Corresponding translation: `../translation/pages_09-12.md`
 
 〈Dense numerical calculations continue from the previous section.〉
 
-### 〈Red circle marker (◯)〉十五ヶ条　禁物場
+### 〈Red circle marker (◯)〉十五ヶ条　禁物場《きんもつば》
 
 〈Section header clearly legible:
 十五ヶ条 — "Fifteen Articles"
-禁物場 — "Forbidden Things of the Marketplace"
-The red circle marker is in the original.〉
+禁物場《きんもつば》 — "Forbidden Things of the Marketplace"
+The red circle marker is in the original. Small kana visible
+alongside 禁物場.〉
 
 〈下:〉
 
@@ -49,7 +50,7 @@ with 禁判 ("forbidden judgment") labels.〉
 
 ### 禁判
 
-売買(?)の(?)判(?)を(?)軽(?)くすべからず(?)。
+売買《うりかい》の(?)判(?)を(?)軽(?)くすべからず(?)。
 
 数(?)日(?)見(?)て(?)の(?)後(?)...
 
@@ -183,11 +184,12 @@ This line is clearly legible and matches the tex translation.〉
 
 〈Red circle marker (◯)〉
 
-### 〈Boxed label:〉半板売米諸勘定之仕法
+### 〈Boxed label:〉半板《はんいた》売米諸勘定之仕法
 
 〈"Method of Calculating Half-Board Rice Sales" — this boxed label
 is clearly visible and matches the tex file (line 1047-1048).
-半板 (hanita, "half-board") refers to selling positions.〉
+半板《はんいた》 — furigana visible alongside this term, confirming
+the reading *hanita* ("half-board"), referring to selling positions.〉
 
 ---
 

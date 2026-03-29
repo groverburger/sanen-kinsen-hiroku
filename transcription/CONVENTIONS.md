@@ -44,14 +44,60 @@ Each section is tagged with an overall confidence level:
   The transcription is a best-effort reconstruction. Multiple alternative
   readings are possible.
 
+## Furigana and reading marks
+
+The manuscript contains several types of small annotations alongside the
+main text. These are recorded using the following conventions:
+
+### Furigana (振り仮名 / 読み仮名)
+
+Small kana written to the right of kanji in the manuscript, indicating the
+author's or editor's intended reading. Recorded using double angle-bracket
+ruby markup (aozora bunko style):
+
+| Markup | Meaning |
+|--------|---------|
+| 漢字《かんじ》 | Furigana clearly legible in the manuscript |
+| 漢字《かんじ(?)》 | Furigana present but partially uncertain |
+| 漢字《□□》 | Furigana visible but illegible |
+
+Examples:
+- `人気《じんき》` — manuscript furigana confirms the reading *jinki*
+- `順来《じゅんらい》` — reading gloss present in the manuscript
+- `転換《てんかん(?)》` — furigana present but second kana uncertain
+
+When NO furigana is present for a given kanji, no ruby markup is added.
+The absence of markup means the manuscript itself does not gloss that term.
+
+### Kundoku marks (返り点)
+
+Reading-order marks used in kanbun (漢文) passages to indicate Japanese
+word order. Recorded inline using standard notation:
+
+| Mark | Notation | Meaning |
+|------|----------|---------|
+| レ | `〈レ〉` | Read the next character first, then return |
+| 一二三 | `〈一〉〈二〉〈三〉` | Numbered reading sequence |
+| 上中下 | `〈上〉〈中〉〈下〉` | Alternate ordering for nested clauses |
+
+Example: `静〈レ〉にして陰を生ず` — the レ mark inverts the two characters.
+
+### Okurigana (送り仮名)
+
+Small kana suffixes written alongside kanji to show grammatical inflections.
+These are transcribed inline as part of the main text stream (they are not
+distinguished from base-text kana). Where the okurigana is notably placed
+*beside* rather than *after* the kanji (i.e., as a marginal annotation
+rather than inline text), note this with `〈okuri:〉`:
+
+Example: `動〈okuri: て〉` — the て is written as a marginal annotation.
+
 ## Text formatting
 
 - Section headers visible in the manuscript (often in larger characters or
   with circle markers ◯) are set on their own line and prefixed with `###`.
 - Red-ink annotations or markings in the original are noted as
   `〈red ink〉` or `〈red circle marker〉`.
-- Kundoku reading marks (返り点, 送り仮名) visible in the manuscript are
-  noted where they affect the reading but are not individually transcribed.
 - Modern punctuation (、。) is added for readability; the original manuscript
   has none.
 

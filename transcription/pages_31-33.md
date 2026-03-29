@@ -16,10 +16,11 @@ Source image: `page_00031.jpg`
 
 ...つぎ(?)に(?)穂(?)を(?)もつ(?)て(?)、数(?)あるに(?)して(?)...
 
-毎年初取引(?)に(?)は(?)、立(?)を(?)もの(?)とする(?)庭(?)...
+毎年初取引《はつあきない》(?)に(?)は(?)、立(?)を(?)もの(?)とする(?)庭(?)...
 
 〈"Each year, the initial rice trading (*hatsu-akinai*) establishes
-a base level." — 毎年初取引 partially legible.〉
+a base level." — 毎年初取引 partially legible. Furigana はつあきない
+visible alongside 初取引.〉
 
 〈Red circle marker〉
 
@@ -39,9 +40,9 @@ a base level." — 毎年初取引 partially legible.〉
 
 〈"Osaka (Dōjima) is the central rice exchange."〉
 
-### 東國西國
+### 東國《とうごく》西國《さいごく》
 
-〈"Eastern and Western Provinces" — clearly legible.〉
+〈"Eastern and Western Provinces" — clearly legible with furigana.〉
 
 ...南(?)の(?)市(?)の(?)方(?)と(?)北(?)...
 

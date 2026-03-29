@@ -21,7 +21,7 @@ Source image: `page_00013.jpg`
 
 〈Boxed label:〉
 
-### 転愛(?)商内之圖
+### 転愛(?)商内《あきない》之圖
 
 〈CRITICAL READING NOTE: This boxed label is the source of the
 "turnover method diagram" referenced in the tex caption at line 537.
@@ -35,12 +35,21 @@ on the left. However, 転愛 ("turn-love") makes no semantic sense
 in a trading context, while 転換 ("turnover/conversion") is a
 standard trading term.
 
-ASSESSMENT: This is most likely 転換商内之圖 with the 換 written
-in a loose cursive that resembles 愛. The tex should be corrected
-to 転換商内之圖. However, there is a non-zero chance the
-manuscript genuinely writes 愛 as a phonetic variant or scribal
-convention — this would need comparison with other manuscripts of
-this text to confirm.〉
+FURIGANA NOTE: Small kana are visible alongside the boxed label.
+The furigana alongside 転 appears to read て (consistent with both
+てんあい and てんかん). The kana alongside the second character are
+partially illegible — the visible strokes are consistent with か
+(supporting 転換《てんかん》) but this cannot be confirmed with
+certainty from the scan resolution. The furigana alongside 商内
+clearly reads あきない.
+
+ASSESSMENT: This is most likely 転換商内之圖《てんかんあきないのず》
+with the 換 written in a loose cursive that resembles 愛. The
+partial furigana evidence leans toward てんかん but is not
+conclusive. The tex should be corrected to 転換商内之圖. However,
+there is a non-zero chance the manuscript genuinely writes 愛 as a
+phonetic variant or scribal convention — this would need comparison
+with other manuscripts of this text to confirm.〉
 
 ### Tree diagram:
 
@@ -100,10 +109,12 @@ Source image: `page_00014.jpg`
 
 錄(?)の掲(?)あせて(?)有(?)する(?)報(?)ありて(?)、...
 
-### 暴風　運氣豊凶之録
+### 暴風《ぼうふう》　運氣《うんき》豊凶《ほうきょう》之録
 
 〈Header clearly legible: "Record of Storms, Fortune-Qi, and
-Abundance or Famine." 暴風 in slightly larger characters.〉
+Abundance or Famine." 暴風 in slightly larger characters. Furigana
+visible alongside 暴風, 運氣, and 豊凶 — all standard on'yomi readings.
+The reading 運氣《うんき》 confirms the Sino-Japanese pronunciation.〉
 
 二百三十年(?)...十二間年(?)
 
@@ -131,9 +142,9 @@ appended to 甲戌. The tex file lists these as separate years:
 
 ### Left page:
 
-### 淡水
+### 淡水《たんすい(?)》
 
-〈"Floods" section〉
+〈"Floods" section. Small kana visible but partially legible.〉
 
 己巳　己卯　己丑　己亥　己酉　己未
 
@@ -165,21 +176,22 @@ Source image: `page_00015.jpg`
 
 ### Right page:
 
-### 水勢
+### 水勢《すいせい》
 
-〈"Water Momentum" section〉
+〈"Water Momentum" section. Furigana visible.〉
 
 癸未　癸丑
 
 〈Red circle marker (◯)〉
 
-### 豊雨
+### 豊雨《ほうう》
 
-〈"Abundant Rain" — two-year periods of beneficial rainfall〉
+〈"Abundant Rain" — two-year periods of beneficial rainfall. Furigana visible.〉
 
-### 梅立
+### 梅立《つゆだち(?)》
 
-〈"Plum Rains (Rainy Season Onset)"〉
+〈"Plum Rains (Rainy Season Onset)." Small kana visible alongside;
+reading appears to be つゆだち rather than ばいりつ.〉
 
 八間年(?)
 
@@ -233,10 +245,12 @@ renders this as "Travel/Pattern."〉
 
 〈Red circle marker (◯)〉
 
-### 大潮小潮之差
+### 大潮《おおしお》小潮《こしお》之差
 
 〈"Difference Between Spring Tides and Neap Tides" —
-clearly legible section header.〉
+clearly legible section header. Furigana visible alongside
+大潮 and 小潮, confirming kun'yomi readings おおしお and こしお
+(not the on'yomi たいちょう/しょうちょう).〉
 
 ...上(?)大(?)間(?)の年の差(?)
 

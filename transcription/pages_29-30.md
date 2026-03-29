@@ -43,9 +43,9 @@ then enter at the 10% level."〉
 
 〈"This diagram is the heart of the entire system."〉
 
-### 強氣の初
+### 強氣《きょうき》の初《はじめ》
 
-〈"The Beginning of Strong Qi" — clearly legible header.〉
+〈"The Beginning of Strong Qi" — clearly legible header with furigana.〉
 
 一割(?)の(?)殖(?)え(?)を(?)...人(?)の(?)強(?)きの(?)理(?)...
 
@@ -100,9 +100,10 @@ Source image: `page_00030.jpg`
 
 ### Right page:
 
-### 世の中積り之事
+### 世の中《よのなか》積り之事
 
-〈"On the World's Accumulation of Matters" — header clearly legible.〉
+〈"On the World's Accumulation of Matters" — header clearly legible.
+Furigana よのなか visible alongside 世の中.〉
 
 ...大(?)合(?)...百(?)年(?)の(?)来(?)...
 
@@ -128,9 +129,9 @@ forms require contextual inference.〉
 
 ### Left page:
 
-### 弱氣の初
+### 弱氣《じゃくき》の初《はじめ》
 
-〈"The Beginning of Weak Qi" — clearly legible.〉
+〈"The Beginning of Weak Qi" — clearly legible with furigana.〉
 
 ...一(?)割(?)の(?)下(?)り(?)...
 ...人(?)は(?)まだ(?)強(?)き(?)な(?)り(?)...

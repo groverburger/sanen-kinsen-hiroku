@@ -28,10 +28,11 @@ Source image: `page_00025.jpg`
 
 〈Red circle marker (◯)〉
 
-### 七福即宝秘密
+### 七福《しちふく》即宝《そくほう(?)》秘密《ひみつ》
 
 〈"Seven Fortunes, Instant Treasure — The Secret"
-七福即宝秘密 — clearly legible section header.〉
+七福即宝秘密 — clearly legible section header. Furigana visible
+alongside 七福 and 秘密; kana near 即宝 partially illegible.〉
 
 一(?)割(?)の(?)殖(?)えを(?)...
 勘(?)氣(?)賣(?)買(?)度(?)あり(?)。
@@ -155,10 +156,11 @@ moving in opposite directions.〉
 
 ### Left page:
 
-### 〈Boxed label:〉随金　商内
+### 〈Boxed label:〉随金《ずいきん》　商内《あきない》
 
 〈"Following Gold in Trading" — 随金 商内 clearly legible in a
-boxed/bordered label.〉
+boxed/bordered label. Furigana visible alongside both terms.
+商内 again confirmed as あきない reading throughout the text.〉
 
 ...金(?)の(?)流(?)る(?)所(?)に(?)随(?)うべし(?)。
 
@@ -194,10 +196,12 @@ Source image: `page_00028.jpg`
 
 〈Central radial/compass diagram:〉
 
-Center: 天明古米　中豊横
+Center: 天明《てんめい》古米《こまい》　中豊《ちゅうほう(?)》横
 
 〈"Tenmei-era Old Rice" and "Middle-Abundance Horizontal"
-— center labels clearly legible.〉
+— center labels clearly legible. Furigana visible alongside
+天明 and 古米 (confirming こまい for old rice). Small kana near
+中豊 are partially illegible.〉
 
 〈Twelve positions radiating outward representing months,
 each with red-ink annotations. Months are marked with
