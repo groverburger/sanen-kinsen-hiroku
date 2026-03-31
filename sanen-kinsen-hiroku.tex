@@ -107,6 +107,24 @@
 \newenvironment{editorialnote}{%
   \begin{editorbox}\small\textit{Editor's note:}\enspace}{\end{editorbox}}
 
+% Chapter heading without page break — for chapters following short-ending content
+\newcommand{\chapternobreak}[1]{%
+  \par\needspace{8\baselineskip}%
+  \vspace{2\baselineskip}%
+  \begin{center}\rule{2in}{0.4pt}\end{center}%
+  \vspace{0.5\baselineskip}%
+  \refstepcounter{chapter}%
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}%
+  {\noindent\normalfont\Large\bfseries\color{chaptercolor}%
+  \chaptertitlename\ \thechapter\par\nobreak
+  \vspace{12pt}%
+  {\LARGE #1}\par\nobreak}%
+  \vspace{20pt}%
+}
+
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
 \hypersetup{
@@ -585,22 +603,14 @@ exhausted. What cannot fall further must eventually rise.
 \section{Record of Spike Patterns}
 
 \begin{center}
-\jp{穂足の録} --- \textit{Hosoku no Roku}
-\end{center}
-
-\begin{editorialnote}
-\jp{穂足} (\textit{hosoku}): literally ``grain-spike form''---\jp{穂}
+\jp{穂足の録}\tn{Literally ``grain-spike form''---\jp{穂}
 (ear of rice) plus \jp{足} (form/trace). In modern Japanese trading,
-\jp{足} is the standard suffix for price representations:
-\jp{ローソク足} (candlestick), \jp{日足} (daily bar), \jp{かぎ足}
-(hook chart), etc. Whether \jp{穂足} is an early instance of this
-convention is an open question---Edo-period traders used bar charts
-(\jp{棒足}) and anchor charts (\jp{いかり足}) rather than
-candlesticks, which are a Meiji-era development. But the shared
-\jp{足} suffix and the agricultural metaphor (an ear of rice is
-morphologically similar to a candlestick element) are suggestive. No
-scholar appears to have previously noted this term.
-\end{editorialnote}
+\jp{足} is the standard suffix for price-chart types:
+\jp{ローソク足} (candlestick), \jp{日足} (daily bar), \jp{棒足}
+(bar chart), etc. Whether \jp{穂足} is an early instance of this
+convention is uncertain, but the shared suffix and agricultural
+metaphor are suggestive.} --- \textit{Hosoku no Roku}
+\end{center}
 
 When buying and holding, one must consider the fortune (\jt{運}{un}) and the
 momentum (\jt{気}{ki}). The transport and supply dynamics, whether two
@@ -612,7 +622,7 @@ rice begins to move, buy. Those who buy impulsively and hold stubbornly will
 fail. Gold and rice are like flowing water; one must read them well, buy
 carefully, and sell at the right moment.
 
-\section{The Tree Diagrams}
+\section{The Scaling Diagrams}
 
 \begin{center}
 \jp{萬光商内之圖}\\
@@ -622,7 +632,7 @@ carefully, and sell at the right moment.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{diagrams/fig1_tree_positions.png}
-\caption[Position-scaling tree diagrams]{Position-scaling tree diagrams from the original manuscript.
+\caption[Position-scaling diagrams]{Position-scaling diagrams from the original manuscript.
 Right page: building from a base purchase (\jp{千十両買})\tn{The
 cartouche reads \jp{千十両買}, which could be parsed as ``1,000+ ry\=o
 buy'' or ``1,010 ry\=o buy.'' The transcription flags this as
@@ -656,21 +666,13 @@ at each step.
 \centering
 \includegraphics[width=0.45\textwidth]{diagrams/fig2_tree_scaling.png}
 \caption[The turnover diagram]{The turnover diagram
-(\jp{転換商内之圖}\protect\footnotemark, \textit{Diagram of
+(\jp{転換商内之圖}, \textit{Diagram of
 Revolving Trading}). A 1,000-ry\=o buying position (\jp{千両買}, bottom)
 scales through four stages (\jp{壱}--\jp{四}) to a 2,000-ry\=o selling
 position (\jp{二千両売}, top). \textit{Image: Kyoto University Main
 Library.}}
 \label{fig:tree2}
 \end{figure}
-\footnotetext{The diagram's title cartouche reads \jp{転換商内之圖}
-(\textit{tenkan akinai no zu}, ``Diagram of Turnover Trading'').
-The cursive form of \jp{換} in the manuscript resembles \jp{愛}, but
-partial furigana alongside the cartouche are consistent with \jp{てんかん}
-(\textit{tenkan}), and the body text uses \jp{転換の法} (\textit{tenkan no
-h\=o}, ``turnover method'') for the same concept. The reading \jp{商内} is
-confirmed as \textit{akinai} by clear furigana.}
-
 When buying positions reach their target, begin to build selling positions
 simultaneously---this is the turnover method (\jt{転換の法}{tenkan no
 h\=o}). For every 1,000 ry\=o in buying positions, prepare to sell 2,000
@@ -688,7 +690,7 @@ This art is not to be shared lightly. It is passed down within the family
 and among trusted associates only.
 
 % =============================================================================
-\chapter{The Sixty-Year Cycle: Weather, Tides, and Harvest}
+\chapternobreak{The Sixty-Year Cycle: Weather, Tides, and Harvest}
 
 \begin{center}
 \jp{暴風 運気豊凶之録}\\
@@ -783,7 +785,7 @@ Across one hundred years of observation, these cycles hold with reasonable
 reliability---roughly one year of error in every ten.
 
 % =============================================================================
-\chapter{The Eight Poles, Celestial Signs, and the Six Observations}
+\chapternobreak{The Eight Poles, Celestial Signs, and the Six Observations}
 
 \section{The Eight Poles}
 
@@ -865,7 +867,7 @@ against the crowd's. If his reasoning is sound and based on the six
 observations, he may be right even against one thousand.
 
 % =============================================================================
-\chapter{The Four Virtues of the Trader}
+\chapternobreak{The Four Virtues of the Trader}
 
 \section{Benevolence (\jp{仁}, \textit{Jin})}
 
@@ -947,7 +949,7 @@ all storms. He who trades with his entire fortune will eventually be
 ruined.
 
 % =============================================================================
-\chapter{The Three Levels and the Middle Star}
+\chapternobreak{The Three Levels and the Middle Star}
 
 The total yields (\jp{諸高}) of all rice-producing domains, combined:
 28,548 \textit{ch\=o},\tn{\jp{町} (\textit{ch\=o}), a unit of
@@ -1226,7 +1228,7 @@ test. The trader who exits from boredom or impatience will miss the eventual
 move.
 
 % =============================================================================
-\chapter{The Grand Diagram}
+\chapternobreak{The Grand Diagram}
 
 \begin{center}
 \jp{上割三下割之圖}\\
@@ -1301,7 +1303,7 @@ and the Yin-Yang subsidiary tables, produces a specific trading action for
 any combination of season, supply level, and market momentum.
 
 % =============================================================================
-\chapter{Reading Strong and Weak Qi}
+\chapternobreak{Reading Strong and Weak Qi}
 
 \section{The Beginning of Strong Qi}
 
@@ -1349,7 +1351,7 @@ Oil and silk prices follow similar patterns, and these observations apply
 to those markets as well.
 
 % =============================================================================
-\chapter{Regional Markets and Final Teachings}
+\chapternobreak{Regional Markets and Final Teachings}
 
 \section{The Geography of Information}
 
