@@ -103,15 +103,48 @@ This feedback led directly to restructuring Chapter 7.3 (summary table + appendi
 - **Attribution research**: The misattribution story required independent research into Nison's books, Japanese library catalogs, and the Honma/Ushida distinction.
 - **Source identification**: Finding the manuscript in Kyoto University's digital archive and recognizing its significance.
 
-### Confidence Assessment
+### Confidence Assessment: What We Know and What We Don't
 
-**Headings, labels, and key terms (high confidence).** Section markers (三十八ヶ条, 十五ヶ条), diagram labels (天明古米, 中星, 天井, 底直), and recurring trading terms (順来, 逢来, 強気, 弱気, 禁判) are written larger and more carefully in the manuscript and can be read reliably.
+A page-by-page audit of the manuscript images against the transcription and translation revealed a systemic issue: the original translation pipeline converted uncertain transcriptions into confident English prose, with zero of the transcription's 342 uncertainty markers propagating into the published text. This has been corrected. The translation now marks interpretive passages explicitly.
 
-**Overall structure and teachings (high confidence).** The text is internally self-consistent in ways that would be very unlikely if the translation were substantially wrong. The preface introduces yin-yang cosmology; the trading rules operationalize it; the Middle Star system quantifies it; the Grand Diagram synthesizes it; the Four Virtues provide the discipline to execute it. Each piece refers back to the others. Key terms (中星, 強気/弱気) appear consistently across multiple contexts with the same meaning. If the characters were being badly misread, this coherence would break down.
+#### What is reliably translated (high confidence)
 
-**Flowing cursive prose (moderate confidence).** The body text in dense passages — the calculation tables, the 38 provisions, the afterword — is read with less certainty. Many individual characters are identified by context and plausibility rather than confident visual recognition. The transcription files record confidence levels (HIGH/MEDIUM/LOW) for this reason.
+- **Section headers and boxed labels** throughout the manuscript: 十五ヶ条, 三十八ヶ条, 穂足の録, 萬光商内之圖, 七福即宝秘密, 随金商内, 強氣立の秘傳, 世の中三段之圖, 上割三下割之圖, 強氣の初, 弱氣の初, 大壱落修の事, etc.
+- **The kanbun preface** (page 3): written in clear semi-cursive, faithfully translated.
+- **Publication details and attribution**: 牛田権三郎, 鳴川猛之助, 嘉永四年五月廿日, 好問堂蔵版, 五十嵐津 — all clearly legible.
+- **Diagram labels and structures** (pages 12, 21, 28): stage markers (壱–四 in red ink), tawara levels, ryo figures, and the Three Levels / Grand Diagram structures are clearly legible.
+- **Sexagenary year lists** (pages 14–15): formulaic characters in systematic lists, reliably read.
+- **The Six Observations list** (page 20): all six Japanese terms (二割, 三割, 高の内, 横の平, 人の気, 大勢) confirmed with furigana.
+- **Key standalone lines**: e.g., 壱買段せ、其まゝ本へもどる (page 19).
+- **Harvest quality grades**: 上作/中作/下作 with furigana.
 
-**Specific numerical figures (moderate-low confidence).** The calculation tables contain figures that are difficult to read in the cursive script, and the manuscript's accounting method connecting the figures across stages is not fully transparent.
+#### What is partially legible (moderate confidence)
+
+- **Seasonal trading rules** (pages 5–7): month references (四月, 六月, 七月) and key terms (古米, 順来, 逢来) are partially legible; the connecting instructions are reconstructed from these anchors.
+- **Position calculation tables** (pages 22–24): stage markers (壱–四/五) and round figures (百両, 八百両, 二拾俵) are legible; intermediate calculations carry uncertainty.
+- **The turnover method ratio** (page 13): 転換の法 and the 1,000/2,000 ratio are supported by partially legible text.
+- **The Middle Star concept** (page 22): 中星 and 三十年 are legible; the buy/sell framework around them is interpretive.
+
+#### What is largely illegible (low confidence — marked `[Interpretive.]`)
+
+- **The 禁判 entries** (pages 6–9): the red-ink 禁判 markers are legible, but the six paragraphs of trading maxims between them are reconstructed from genre conventions and fragmentary readings.
+- **The afterword** (pages 31–32): dense flowing cursive with water damage. Only the attribution (鳴川猛之助) and date are confirmed. The philosophical prose is an interpretive reconstruction of the afterword's apparent themes.
+- **The Wisdom section** (page 18): the header 智 十首 is legible; the body text cannot be reliably translated.
+- **Courage section** (page 19): the header 勇 is legible; body text too brief and cursive to confirm.
+- **Wind and Rain** (page 29): header and month markers legible; agricultural details between them were fabricated in earlier versions and have been removed.
+- **Strong Qi / Weak Qi / Great First Decline** (pages 29–30): headers legible; the prose descriptions are interpretive reconstructions from fragments.
+- **The Seven Fortunes conditions** (page 25): the header 七福即宝秘密 is legible; a numbered list of seven specific conditions that appeared in earlier versions was fabricated and has been removed.
+
+#### What was corrected in this audit
+
+- **六秘見** → **六初覚**: a fabricated Japanese compound was replaced with the transcription's actual reading.
+- **Turnover diagram labels**: the caption claimed 千両買/二千両売; the manuscript shows 百両買/百両賣.
+- **Page 12 attribution**: 転換商内之圖 was attributed to the left page; the visible boxed label is 萬光商内之圖.
+- **天明古写本** → **天明古米**: a misreading in the Grand Diagram caption.
+- **天明 era reference** → **天之商内**: "in the Tenmei era" was a misreading of "within heaven's trading."
+- **大名 (daimyō)**: likely a misreading of 男の方 (men's side) — removed.
+- **大潮/小潮 furigana**: claimed readings おおしお/こしお could not be confirmed and were removed.
+- **Fabricated prose removed**: "The market is not a place of chance but of pattern," the four-virtue afterword list, "Gold and rice are like flowing water," monthly agricultural details (frost, plum rains, typhoon), "A rule without understanding is dangerous," the military-general analogy, and others.
 
 ### Research Context: Why This Is Novel
 
